@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MCC performance analytics — win rates, match history, player roster, and head-to-head records.">
+  <title>Analytics | Milton Cricket Champs</title>
+  <link rel="icon" type="image/jpeg" href="img/logo.jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-brand">
+      <img src="img/logo.jpeg" alt="MCC Logo" class="nav-logo">
+      <span>Milton Cricket Champs</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="team.html">Team</a></li>
+<li><a href="achievements.html">Achievements</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="analytics.html" class="active">Analytics</a></li>
+<li><a href="sponsorship.html">Sponsorship</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+    </ul>
+  </div>
+</nav>
+<main>
+
+<!-- Hero Banner -->
+<section class="page-hero">
+  <div class="page-hero-bg">
+    <img src="img/hero.jpeg" alt="MCC Analytics">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="page-hero-content">
+    <h1>MCC Analytics</h1>
+    <p>Performance dashboard powered by CricHeroes data</p>
+  </div>
+</section>
+
+<!-- Overall Stats -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Overall Performance</h2>
+    <p class="section-subtitle">Consolidated stats across all MCC teams on CricHeroes (external matches only).</p>
+    
+    <div class="analytics-stats">
+      <div class="a-stat-card">
+        <span class="a-stat-num">65</span>
+        <span class="a-stat-label">Matches Played</span>
+      </div>
+      <div class="a-stat-card a-stat-win">
+        <span class="a-stat-num">37</span>
+        <span class="a-stat-label">Wins</span>
+      </div>
+      <div class="a-stat-card a-stat-loss">
+        <span class="a-stat-num">28</span>
+        <span class="a-stat-label">Losses</span>
+      </div>
+      <div class="a-stat-card a-stat-pct">
+        <span class="a-stat-num">56.9%</span>
+        <span class="a-stat-label">Win Rate</span>
+      </div>
+      <div class="a-stat-card">
+        <span class="a-stat-num">46</span>
+        <span class="a-stat-label">Players</span>
+      </div>
+      <div class="a-stat-card">
+        <span class="a-stat-num">7</span>
+        <span class="a-stat-label">Registered Teams</span>
+      </div>
+    </div>
+    <div class="winloss-bar">
+      <div class="wl-wins" style="width:57%"><span>W 37</span></div>
+      <div class="wl-losses" style="width:43%"><span>L 28</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Opponent Breakdown -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Head-to-Head Record</h2>
+    <div class="opponents-table"><table><thead><tr><th>Opponent</th><th>P</th><th>W</th><th>L</th><th>Win%</th></tr></thead><tbody><tr><td>Markhor Zalmi</td><td>5</td><td>2</td><td>3</td><td><span class="opp-bad">40%</span></td></tr><tr><td>BCC Blue</td><td>5</td><td>4</td><td>1</td><td><span class="opp-good">80%</span></td></tr><tr><td>BCC Red</td><td>4</td><td>3</td><td>1</td><td><span class="opp-good">75%</span></td></tr><tr><td>GTA Outlaws</td><td>3</td><td>0</td><td>3</td><td><span class="opp-bad">0%</span></td></tr><tr><td>Oak Cricket Club</td><td>3</td><td>3</td><td>0</td><td><span class="opp-good">100%</span></td></tr><tr><td>Alton Strikers Cricket Club</td><td>3</td><td>2</td><td>1</td><td><span class="opp-good">67%</span></td></tr><tr><td>Trailblazers</td><td>3</td><td>2</td><td>1</td><td><span class="opp-good">67%</span></td></tr><tr><td>Burlington Cricket Club</td><td>3</td><td>0</td><td>3</td><td><span class="opp-bad">0%</span></td></tr><tr><td>Halton Falcons</td><td>2</td><td>1</td><td>1</td><td><span class="opp-good">50%</span></td></tr><tr><td>The Swifters</td><td>2</td><td>1</td><td>1</td><td><span class="opp-good">50%</span></td></tr><tr><td>Milton Stars</td><td>2</td><td>1</td><td>1</td><td><span class="opp-good">50%</span></td></tr><tr><td>Bashir Bois</td><td>2</td><td>1</td><td>1</td><td><span class="opp-good">50%</span></td></tr><tr><td>YBCC</td><td>2</td><td>2</td><td>0</td><td><span class="opp-good">100%</span></td></tr><tr><td>Lions Cricket Club</td><td>2</td><td>1</td><td>1</td><td><span class="opp-good">50%</span></td></tr><tr><td>BLCC</td><td>2</td><td>1</td><td>1</td><td><span class="opp-good">50%</span></td></tr><tr><td>Milton Mavericks</td><td>2</td><td>0</td><td>2</td><td><span class="opp-bad">0%</span></td></tr><tr><td>Falcons Red</td><td>2</td><td>1</td><td>1</td><td><span class="opp-good">50%</span></td></tr><tr><td>Caledonia Warriors</td><td>1</td><td>1</td><td>0</td><td><span class="opp-good">100%</span></td></tr><tr><td>BCC Green</td><td>1</td><td>0</td><td>1</td><td><span class="opp-bad">0%</span></td></tr><tr><td>Binbrook Kings - HCC</td><td>1</td><td>1</td><td>0</td><td><span class="opp-good">100%</span></td></tr><tr><td>Oakville Desi Players Club</td><td>1</td><td>0</td><td>1</td><td><span class="opp-bad">0%</span></td></tr><tr><td>Markhor Nawab</td><td>1</td><td>1</td><td>0</td><td><span class="opp-good">100%</span></td></tr><tr><td>HCC Kings</td><td>1</td><td>1</td><td>0</td><td><span class="opp-good">100%</span></td></tr><tr><td>Aces</td><td>1</td><td>0</td><td>1</td><td><span class="opp-bad">0%</span></td></tr><tr><td>Milton Panthers</td><td>1</td><td>1</td><td>0</td><td><span class="opp-good">100%</span></td></tr><tr><td>Churchill Warriors</td><td>1</td><td>1</td><td>0</td><td><span class="opp-good">100%</span></td></tr><tr><td>Stallions</td><td>1</td><td>1</td><td>0</td><td><span class="opp-good">100%</span></td></tr><tr><td>Halton Hawks</td><td>1</td><td>0</td><td>1</td><td><span class="opp-bad">0%</span></td></tr><tr><td>Markhor Royals</td><td>1</td><td>1</td><td>0</td><td><span class="opp-good">100%</span></td></tr><tr><td>Milton Hawks</td><td>1</td><td>1</td><td>0</td><td><span class="opp-good">100%</span></td></tr><tr><td>Burloak Falcons 2</td><td>1</td><td>1</td><td>0</td><td><span class="opp-good">100%</span></td></tr><tr><td>Milton Lions</td><td>1</td><td>0</td><td>1</td><td><span class="opp-bad">0%</span></td></tr><tr><td>Shawarma Royale - Milton</td><td>1</td><td>1</td><td>0</td><td><span class="opp-good">100%</span></td></tr><tr><td>Markhor Sheild</td><td>1</td><td>0</td><td>1</td><td><span class="opp-bad">0%</span></td></tr><tr><td>Falcons Blue</td><td>1</td><td>1</td><td>0</td><td><span class="opp-good">100%</span></td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- Recent Matches -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Recent Matches</h2>
+    <div class="matches-table"><table><thead><tr><th>Date</th><th>Opponent</th><th>MCC</th><th>Opp</th><th>Result</th></tr></thead><tbody><tr class="match-win"><td>2026-03-08</td><td>Markhor Zalmi</td><td></td><td></td><td>Won by walkover</td></tr><tr class="match-win"><td>2026-03-07</td><td>Markhor Zalmi</td><td></td><td></td><td>Won by walkover</td></tr><tr class="match-win"><td>2026-02-22</td><td>BCC Red</td><td>95/1</td><td>90/3</td><td>Won by 7 wickets</td></tr><tr class="match-win"><td>2026-02-15</td><td>BCC Blue</td><td>89/3</td><td>83/6</td><td>Won by 6 runs</td></tr><tr class="match-loss"><td>2026-02-15</td><td>GTA Outlaws</td><td>64/4</td><td>90/7</td><td>Lost by 26 runs</td></tr><tr class="match-win"><td>2026-02-08</td><td>Oak Cricket Club</td><td>111/0</td><td>55/6</td><td>Won by 56 runs</td></tr><tr class="match-loss"><td>2026-02-07</td><td>Alton Strikers Cricket Club</td><td>94/2</td><td>106/3</td><td>Lost by 12 runs</td></tr><tr class="match-loss"><td>2026-02-01</td><td>BCC Red</td><td>75/6</td><td>76/0</td><td>Lost by 8 wickets</td></tr><tr class="match-win"><td>2026-02-01</td><td>Halton Falcons</td><td>107/1</td><td>67/8</td><td>Won by 40 runs</td></tr><tr class="match-win"><td>2026-01-25</td><td>Caledonia Warriors</td><td>107/1</td><td>103/2</td><td>Won by 6 wickets</td></tr><tr class="match-win"><td>2026-01-24</td><td>Alton Strikers Cricket Club</td><td>22/1</td><td>21/7</td><td>Won by 7 wickets</td></tr><tr class="match-loss"><td>2026-01-18</td><td>GTA Outlaws</td><td>45/8</td><td>70/7</td><td>Lost by 25 runs</td></tr><tr class="match-loss"><td>2026-01-18</td><td>BCC Green</td><td>98/6</td><td>101/3</td><td>Lost by 5 wickets</td></tr><tr class="match-win"><td>2026-01-11</td><td>The Swifters</td><td>71/6</td><td>68/7</td><td>Won by 4 wickets</td></tr><tr class="match-win"><td>2026-01-11</td><td>Binbrook Kings - HCC</td><td>81/4</td><td>80/6</td><td>Won by 4 wickets</td></tr><tr class="match-loss"><td>2026-01-04</td><td>Oakville Desi Players Club</td><td>48/6</td><td>50/2</td><td>Lost by 6 wickets</td></tr><tr class="match-win"><td>2026-01-04</td><td>Trailblazers</td><td>57/2</td><td>55/7</td><td>Won by 6 wickets</td></tr><tr class="match-win"><td>2025-12-28</td><td>BCC Blue</td><td>27/0</td><td>26/7</td><td>Won by 7 wickets</td></tr><tr class="match-loss"><td>2025-12-21</td><td>GTA Outlaws</td><td>71/4</td><td>115/2</td><td>Lost by 44 runs</td></tr><tr class="match-win"><td>2025-12-21</td><td>Oak Cricket Club</td><td>47/1</td><td>45/7</td><td>Won by 6 wickets</td></tr><tr class="match-win"><td>2025-12-14</td><td>Milton Stars</td><td>86/1</td><td>83/7</td><td>Won by 9 wickets</td></tr><tr class="match-win"><td>2025-12-14</td><td>BCC Red</td><td>74/4</td><td>80/6</td><td>Won by 5 wickets</td></tr><tr class="match-loss"><td>2025-12-07</td><td>Markhor Zalmi</td><td>84/4</td><td>84/3</td><td>Lost by 84 runs</td></tr><tr class="match-loss"><td>2025-11-30</td><td>Bashir Bois</td><td>70/3</td><td>71/3</td><td>Lost by 7 wickets</td></tr><tr class="match-loss"><td>2025-11-23</td><td>Halton Falcons</td><td>67/6</td><td>68/4</td><td>Lost by 5 wickets</td></tr><tr class="match-loss"><td>2025-11-16</td><td>Trailblazers</td><td>50/7</td><td>102/3</td><td>Lost by 52 runs</td></tr><tr class="match-win"><td>2025-11-09</td><td>Markhor Nawab</td><td>78/5</td><td>76/7</td><td>Won by 5 wickets</td></tr><tr class="match-win"><td>2025-11-08</td><td>Alton Strikers Cricket Club</td><td>84/3</td><td>83/5</td><td>Won by 4 wickets</td></tr><tr class="match-loss"><td>2025-11-02</td><td>The Swifters</td><td>70/2</td><td>67/6</td><td>Lost by 42 runs</td></tr><tr class="match-win"><td>2025-10-19</td><td>YBCC</td><td></td><td></td><td>Won by 53 runs</td></tr><tr class="match-win"><td>2025-09-14</td><td>HCC Kings</td><td>68/5</td><td>67/8</td><td>Won by 5 wickets</td></tr><tr class="match-win"><td>2025-09-08</td><td>Lions Cricket Club</td><td>66/2</td><td>64/3</td><td>Won by 8 wickets</td></tr><tr class="match-loss"><td>2025-08-31</td><td>Aces</td><td>66/8</td><td>80/5</td><td>Lost by 41 runs</td></tr><tr class="match-win"><td>2025-08-18</td><td>YBCC</td><td>87/7</td><td>69/6</td><td>Won by 18 runs</td></tr><tr class="match-win"><td>2025-08-11</td><td>Milton Panthers</td><td>41/4</td><td>40/7</td><td>Won by 6 wickets</td></tr><tr class="match-win"><td>2025-08-03</td><td>Churchill Warriors</td><td>110/5</td><td>79/8</td><td>Won by 31 runs</td></tr><tr class="match-win"><td>2025-07-27</td><td>Stallions</td><td>87/3</td><td>85/4</td><td>Won by 7 wickets</td></tr><tr class="match-loss"><td>2025-07-21</td><td>Halton Hawks</td><td>85/5</td><td>101/7</td><td>Lost by 16 runs</td></tr><tr class="match-loss"><td>2025-07-13</td><td>Lions Cricket Club</td><td>98/4</td><td>124/6</td><td>Lost by 26 runs</td></tr><tr class="match-loss"><td>2025-07-06</td><td>BLCC</td><td>70/6</td><td>90/6</td><td>Lost by 20 runs</td></tr><tr class="match-win"><td>2025-06-23</td><td>Markhor Royals</td><td>81/5</td><td>75/9</td><td>Won by 6 runs</td></tr><tr class="match-win"><td>2025-06-23</td><td>Milton Hawks</td><td>97/3</td><td>92/5</td><td>Won by 7 wickets</td></tr><tr class="match-win"><td>2025-06-08</td><td>Burloak Falcons 2</td><td>80/5</td><td>66/8</td><td>Won by 5 runs</td></tr><tr class="match-loss"><td>2025-04-19</td><td>Markhor Zalmi</td><td>79/3</td><td>91/9</td><td>Lost by 12 runs</td></tr><tr class="match-loss"><td>2025-04-12</td><td>Milton Mavericks</td><td>69/3</td><td>96/3</td><td>Lost by 27 runs</td></tr><tr class="match-win"><td>2025-04-05</td><td>Bashir Bois</td><td>69/6</td><td>68/8</td><td>Won by 4 wickets</td></tr><tr class="match-loss"><td>2025-02-16</td><td>Milton Lions</td><td>52/7</td><td>82/2</td><td>Lost by 30 runs</td></tr><tr class="match-loss"><td>2025-02-02</td><td>Milton Stars</td><td>79/2</td><td>81/2</td><td>Lost by 5 wickets</td></tr><tr class="match-loss"><td>2025-01-11</td><td>Markhor Zalmi</td><td>53/10</td><td>84/2</td><td>Lost by 31 runs</td></tr><tr class="match-win"><td>2025-01-05</td><td>Shawarma Royale - Milton</td><td>68/4</td><td>67/4</td><td>Won by 6 wickets</td></tr><tr class="match-win"><td>2024-12-14</td><td>BLCC</td><td>80/4</td><td>72/5</td><td>Won by 8 runs</td></tr><tr class="match-loss"><td>2024-12-01</td><td>Markhor Sheild</td><td>68/8</td><td>96/5</td><td>Lost by 28 runs</td></tr><tr class="match-loss"><td>2024-11-23</td><td>Milton Mavericks</td><td>84/7</td><td>110/3</td><td>Lost by 26 runs</td></tr><tr class="match-loss"><td>2024-11-16</td><td>Burlington Cricket Club</td><td>79/7</td><td>90/6</td><td>Lost by 11 runs</td></tr><tr class="match-win"><td>2024-11-09</td><td>Trailblazers</td><td>59/3</td><td>104/4</td><td>Won by 6 wickets</td></tr><tr class="match-loss"><td>2024-10-19</td><td>Burlington Cricket Club</td><td>65/5</td><td>66/1</td><td>Lost by 9 wickets</td></tr><tr class="match-loss"><td>2024-10-19</td><td>Burlington Cricket Club</td><td>65/10</td><td>93/8</td><td>Lost by 28 runs</td></tr><tr class="match-win"><td>2024-09-03</td><td>BCC Blue</td><td>73/3</td><td>72/6</td><td>Won by 7 wickets</td></tr><tr class="match-loss"><td>2024-09-02</td><td>BCC Blue</td><td>113/4</td><td>114/9</td><td>Lost by 1 wicket</td></tr><tr class="match-win"><td>2024-08-18</td><td>BCC Blue</td><td>124/5</td><td>69/5</td><td>Won by 55 runs</td></tr><tr class="match-win"><td>2024-08-18</td><td>Falcons Red</td><td>76/3</td><td>75/10</td><td>Won by 7 wickets</td></tr><tr class="match-win"><td>2024-08-17</td><td>Oak Cricket Club</td><td>53/3</td><td>52/7</td><td>Won by 7 wickets</td></tr><tr class="match-win"><td>2024-08-11</td><td>Falcons Blue</td><td>33/2</td><td>32/9</td><td>Won by 8 wickets</td></tr><tr class="match-win"><td>2024-08-11</td><td>BCC Red</td><td>37/1</td><td>36/9</td><td>Won by 9 wickets</td></tr><tr class="match-loss"><td>2024-08-10</td><td>Falcons Red</td><td>81/10</td><td>86/7</td><td>Lost by 19 runs</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<!-- Player Roster -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">MCC Player Roster</h2>
+    <p class="section-subtitle">46 unique players across all MCC teams.</p>
+    <div class="roster-grid"><div class="roster-card"><span class="roster-name">Abhishek</span></div><div class="roster-card"><span class="roster-name">Abhishek K</span></div><div class="roster-card"><span class="roster-name">Abhishek Kamle</span></div><div class="roster-card"><span class="roster-name">Adi Shanbhag</span></div><div class="roster-card"><span class="roster-name">Aditya V</span></div><div class="roster-card"><span class="roster-name">Aditya Verma</span></div><div class="roster-card"><span class="roster-name">Akhil Pandey</span></div><div class="roster-card"><span class="roster-name">Allwyn</span></div><div class="roster-card"><span class="roster-name">Animesh Kumar</span></div><div class="roster-card"><span class="roster-name">Ankit Gadhiya</span></div><div class="roster-card"><span class="roster-name">Ankur Mangla</span></div><div class="roster-card"><span class="roster-name">Bhagwat V</span></div><div class="roster-card"><span class="roster-name">Bhavesh Rane</span></div><div class="roster-card"><span class="roster-name">Bhavik Mody</span></div><div class="roster-card"><span class="roster-name">Bhupinder Arora</span></div><div class="roster-card"><span class="roster-name">Damanvir Singh</span></div><div class="roster-card"><span class="roster-name">Deepak Morey</span></div><div class="roster-card"><span class="roster-name">Gautam Grover</span></div><div class="roster-card"><span class="roster-name">Himanshu Kharat</span></div><div class="roster-card"><span class="roster-name">Jaydeep Bhatt</span></div><div class="roster-card"><span class="roster-name">Jayesh</span></div><div class="roster-card"><span class="roster-name">Jayesh N</span></div><div class="roster-card"><span class="roster-name">Mandar Patil</span></div><div class="roster-card"><span class="roster-name">Manush Raval</span></div><div class="roster-card"><span class="roster-name">Mayur Mhetre</span></div><div class="roster-card"><span class="roster-name">Mohit Joshi</span></div><div class="roster-card"><span class="roster-name">Nachiket S</span></div><div class="roster-card"><span class="roster-name">Nachiket Sahasrabudhe</span></div><div class="roster-card"><span class="roster-name">Narendra Thippappa</span></div><div class="roster-card"><span class="roster-name">Neel Kulkarni</span></div><div class="roster-card"><span class="roster-name">Pankaj Yawalkar</span></div><div class="roster-card"><span class="roster-name">Prateek Chawla</span></div><div class="roster-card"><span class="roster-name">Rakesh Save</span></div><div class="roster-card"><span class="roster-name">Rishi</span></div><div class="roster-card"><span class="roster-name">Sachin Deshpande</span></div><div class="roster-card"><span class="roster-name">Sachin Sakpal</span></div><div class="roster-card"><span class="roster-name">Sachin Sakpal</span></div><div class="roster-card"><span class="roster-name">Satbir Turna</span></div><div class="roster-card"><span class="roster-name">Shahzad Ahmad</span></div><div class="roster-card"><span class="roster-name">Sreemith</span></div><div class="roster-card"><span class="roster-name">Sukhwinder Mann</span></div><div class="roster-card"><span class="roster-name">Suri</span></div><div class="roster-card"><span class="roster-name">Taha Mohyuddin</span></div><div class="roster-card"><span class="roster-name">Uday Bhagat</span></div><div class="roster-card"><span class="roster-name">Vipul Save</span></div><div class="roster-card"><span class="roster-name">Vishal Chandra</span></div></div>
+  </div>
+</section>
+
+<!-- CricHeroes Links -->
+<section class="section">
+  <div class="container" style="text-align:center;">
+    <h2 class="section-title">View on CricHeroes</h2>
+    <p class="section-subtitle">Full scorecards, ball-by-ball commentary, and player stats on CricHeroes.</p>
+    <div class="ch-links-grid">
+      <a href="https://cricheroes.com/team-profile/7776688/t/matches" target="_blank" rel="noopener" class="ch-link-btn">Team 7776688</a> <a href="https://cricheroes.com/team-profile/9751204/t/matches" target="_blank" rel="noopener" class="ch-link-btn">Team 9751204</a> <a href="https://cricheroes.com/team-profile/10765334/t/matches" target="_blank" rel="noopener" class="ch-link-btn">Team 10765334</a> <a href="https://cricheroes.com/team-profile/10880279/t/matches" target="_blank" rel="noopener" class="ch-link-btn">Team 10880279</a> <a href="https://cricheroes.com/team-profile/10880280/t/matches" target="_blank" rel="noopener" class="ch-link-btn">Team 10880280</a> <a href="https://cricheroes.com/team-profile/7128971/t/matches" target="_blank" rel="noopener" class="ch-link-btn">Team 7128971</a> <a href="https://cricheroes.com/team-profile/11261085/t/matches" target="_blank" rel="noopener" class="ch-link-btn">Team 11261085</a> 
+    </div>
+    <p class="cricheroes-note" style="margin-top:24px;">Data last updated when the site was built. For live stats, visit the CricHeroes links above.</p>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-col footer-brand">
+      <img src="img/logo.jpeg" alt="MCC Logo" class="footer-logo">
+      <p class="footer-tagline">Play Hard. Grow Together &mdash; Go MCC!!!</p>
+      <span class="nfp-badge">Registered Not-for-Profit</span>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="analytics.html">Analytics</a></li>
+        <li><a href="sponsorship.html">Sponsorship</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <p><strong>Email:</strong> miltoncricketchamps@gmail.com</p>
+      <p><strong>Location:</strong> Milton, Ontario, Canada</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/miltoncricketchamps/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+        </a>
+        <a href="#" class="whatsapp-link" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M17.47 14.38c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.15-.2.29-.76.95-.93 1.14-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.59.13-.13.29-.34.44-.51.15-.17.2-.29.29-.48.1-.2.05-.37-.02-.51-.07-.15-.66-1.58-.9-2.17-.24-.56-.48-.49-.66-.5h-.56c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44 0 1.44 1.05 2.83 1.19 3.02.15.2 2.06 3.14 4.99 4.41.7.3 1.24.48 1.66.61.7.22 1.34.19 1.84.12.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.56-.34m-5.42 7.4h-.03a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.9 6.99c0 5.46-4.44 9.9-9.88 9.9m8.41-18.31A11.82 11.82 0 0 0 12.05 0C5.49 0 .09 5.4.09 12.04c0 2.12.56 4.19 1.61 6.01L0 24l6.1-1.6a12.04 12.04 0 0 0 5.95 1.56c6.56 0 11.94-5.4 11.94-12.04 0-3.22-1.24-6.24-3.52-8.52"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Milton Cricket Champs. All Rights Reserved.</p>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
