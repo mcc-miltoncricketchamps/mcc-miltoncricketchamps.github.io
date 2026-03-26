@@ -538,6 +538,57 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: var(--shadow);
 }
 
+/* --- Members Roster Bubbles --- */
+.members-roster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+.member-bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s;
+}
+.member-bubble:hover {
+  transform: translateY(-4px);
+}
+.member-initials {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--bubble-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+  transition: opacity 0.2s, box-shadow 0.2s;
+}
+.member-bubble:hover .member-initials {
+  opacity: 1;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+.member-name {
+  font-size: 0.7rem;
+  color: var(--text-gray);
+  text-align: center;
+  max-width: 70px;
+  line-height: 1.2;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.member-bubble:hover .member-name {
+  opacity: 1;
+  color: var(--white);
+}
+
 /* --- CTA Section --- */
 .cta-section {
   text-align: center;
