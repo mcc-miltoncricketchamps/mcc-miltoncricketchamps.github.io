@@ -43,7 +43,7 @@
   }
 
   // --- Scroll reveal animation ---
-  var revealElements = document.querySelectorAll('.section, .achievement-card, .value-card, .team-card, .tier-card, .timeline-card, .reason-card, .format-card');
+  var revealElements = document.querySelectorAll('.section, .achievement-card, .value-card, .team-card, .benefit-card, .timeline-card, .reason-card, .format-card');
   if (revealElements.length > 0 && 'IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {

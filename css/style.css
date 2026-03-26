@@ -757,76 +757,49 @@ img { max-width: 100%; height: auto; display: block; }
 .reason-card p { color: var(--text-gray); font-size: 0.9rem; }
 
 /* --- Tier Grid --- */
-.tier-grid {
+/* --- Sponsor Benefits Layout --- */
+.sponsor-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
+  grid-template-columns: 1fr 320px;
+  gap: 40px;
   margin-top: 40px;
   align-items: start;
 }
-.tier-card {
+.sponsor-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.benefit-card {
   background: var(--card-bg);
   border-radius: var(--radius);
-  padding: 36px 28px;
-  text-align: center;
+  padding: 24px;
   border: 1px solid rgba(255,255,255,0.08);
-  position: relative;
   transition: transform var(--transition);
 }
-.tier-card:hover { transform: translateY(-4px); }
-.tier-card.featured {
-  border-color: var(--gold);
-  transform: scale(1.04);
-  box-shadow: 0 8px 40px rgba(245,166,35,0.2);
+.benefit-card:hover { transform: translateY(-4px); }
+.benefit-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
 }
-.tier-card.featured:hover { transform: scale(1.06); }
-.tier-popular {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--gold);
-  color: var(--navy);
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 4px 20px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.tier-header h3 {
-  font-size: 1.6rem;
+.benefit-card h3 {
+  font-size: 1.05rem;
+  color: var(--orange);
   margin-bottom: 8px;
 }
-.tier-bronze .tier-header h3 { color: #CD7F32; }
-.tier-silver .tier-header h3 { color: #C0C0C0; }
-.tier-gold .tier-header h3 { color: var(--gold); }
-.tier-price {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: var(--white);
-  margin-bottom: 24px;
-}
-.tier-features {
-  list-style: none;
-  text-align: left;
-  margin-bottom: 28px;
-}
-.tier-features li {
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  color: var(--text-gray);
+.benefit-card p {
   font-size: 0.9rem;
-  position: relative;
-  padding-left: 24px;
+  color: var(--text-gray);
+  line-height: 1.5;
 }
-.tier-features li::before {
-  content: '\2713';
-  position: absolute;
-  left: 0;
-  color: var(--orange);
-  font-weight: 700;
+.sponsor-poster {
+  position: sticky;
+  top: 100px;
+}
+.sponsor-poster img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 }
 
 /* --- Current Sponsor --- */
@@ -1338,8 +1311,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 @media (max-width: 1024px) {
   .footer-container { grid-template-columns: 1fr 1fr; }
-  .tier-card.featured { transform: scale(1); }
-  .tier-card.featured:hover { transform: translateY(-4px); }
+  .sponsor-layout { grid-template-columns: 1fr; }
+  .sponsor-poster { position: static; max-width: 360px; margin: 0 auto; }
 }
 
 @media (max-width: 768px) {
@@ -1390,7 +1363,7 @@ img { max-width: 100%; height: auto; display: block; }
   .team-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .trophy-gallery { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-  .tier-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+  .sponsor-benefits { grid-template-columns: 1fr; }
   .sponsor-reasons { grid-template-columns: 1fr; }
 
   /* Contact */
