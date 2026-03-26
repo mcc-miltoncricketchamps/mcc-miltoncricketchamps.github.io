@@ -145,3 +145,70 @@
   }
 
 })();
+
+// --- WhatsApp Message Builder ---
+function waSelect(btn) {
+  // Toggle selection within the same group
+  var siblings = btn.parentElement.querySelectorAll('.wa-option');
+  siblings.forEach(function(s) { s.classList.remove('selected'); });
+  btn.classList.add('selected');
+
+  // Show/hide experience step based on reason
+  var expStep = document.getElementById('waExpStep');
+  if (expStep && btn.parentElement.id === 'waReason') {
+    expStep.style.display = btn.getAttribute('data-value') === 'join' ? 'block' : 'none';
+    if (btn.getAttribute('data-value') !== 'join') {
+      // Clear experience selection
+      var expBtns = document.querySelectorAll('#waExperience .wa-option');
+      expBtns.forEach(function(b) { b.classList.remove('selected'); });
+    }
+  }
+}
+
+function waBuildLink() {
+  var reasonBtn = document.querySelector('#waReason .wa-option.selected');
+  var expBtn = document.querySelector('#waExperience .wa-option.selected');
+  var name = (document.getElementById('waName') || {}).value || '';
+  var msg = (document.getElementById('waMsg') || {}).value || '';
+
+  if (!reasonBtn) {
+    alert('Please select why you are reaching out.');
+    return false;
+  }
+  if (!name.trim()) {
+    alert('Please enter your name.');
+    return false;
+  }
+
+  var reasonMap = {
+    'sponsor': 'Potential Sponsor',
+    'join': 'Want to Join the Team',
+    'general': 'General Inquiry'
+  };
+  var reason = reasonMap[reasonBtn.getAttribute('data-value')] || 'General Inquiry';
+
+  var lines = [];
+  lines.push('Hi MCC! ' + String.fromCodePoint(0x1F3CF));
+  lines.push('');
+  lines.push(String.fromCodePoint(0x1F464) + ' Name: ' + name.trim());
+  lines.push(String.fromCodePoint(0x1F4CB) + ' Reason: ' + reason);
+
+  if (reasonBtn.getAttribute('data-value') === 'join' && expBtn) {
+    var expMap = {
+      'beginner': 'Beginner',
+      'intermediate': 'Intermediate',
+      'advanced': 'Advanced / League Experience'
+    };
+    lines.push(String.fromCodePoint(0x1F3C6) + ' Experience: ' + (expMap[expBtn.getAttribute('data-value')] || ''));
+  }
+
+  if (msg.trim()) {
+    lines.push('');
+    lines.push(String.fromCodePoint(0x1F4AC) + ' ' + msg.trim());
+  }
+
+  var text = encodeURIComponent(lines.join('\n'));
+  var sendBtn = document.getElementById('waSendBtn');
+  sendBtn.href = 'https://wa.me/16475231638?text=' + text;
+  return true;
+}

@@ -86,26 +86,54 @@
         </div>
       </div>
 
-      <!-- Quick Contact Actions -->
+      <!-- WhatsApp Message Builder -->
       <div class="contact-form-wrapper">
-        <h2>Get in Touch</h2>
-        <p style="color: #888; margin-bottom: 24px;">Choose the easiest way to reach us:</p>
-        <div class="contact-actions">
-          <a href="https://wa.me/16475231638?text=Hi%20MCC%2C%20I%27d%20like%20to%20know%20more%20about..." target="_blank" rel="noopener" class="contact-action-card">
-            <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#25D366" d="M17.47 14.38c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.15-.2.29-.76.95-.93 1.14-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.59.13-.13.29-.34.44-.51.15-.17.2-.29.29-.48.1-.2.05-.37-.02-.51-.07-.15-.66-1.58-.9-2.17-.24-.56-.48-.49-.66-.5h-.56c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44 0 1.44 1.05 2.83 1.19 3.02.15.2 2.06 3.14 4.99 4.41.7.3 1.24.48 1.66.61.7.22 1.34.19 1.84.12.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.56-.34"/></svg>
-            <h4>WhatsApp</h4>
-            <p>Chat with us instantly</p>
+        <h2>Send Us a Message</h2>
+        <p style="color: #888; margin-bottom: 20px;">Tell us why you're reaching out and we'll get back to you on WhatsApp!</p>
+
+        <div class="wa-builder" id="waBuilder">
+          <!-- Step 1: Reason -->
+          <div class="wa-step">
+            <label class="wa-label">I'm reaching out because...</label>
+            <div class="wa-options" id="waReason">
+              <button class="wa-option" data-value="sponsor" onclick="waSelect(this)">Potential Sponsor</button>
+              <button class="wa-option" data-value="join" onclick="waSelect(this)">Want to Join the Team</button>
+              <button class="wa-option" data-value="general" onclick="waSelect(this)">General Inquiry</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Experience (shown only for join) -->
+          <div class="wa-step wa-hidden" id="waExpStep">
+            <label class="wa-label">My cricket experience level:</label>
+            <div class="wa-options" id="waExperience">
+              <button class="wa-option" data-value="beginner" onclick="waSelect(this)">Beginner</button>
+              <button class="wa-option" data-value="intermediate" onclick="waSelect(this)">Intermediate</button>
+              <button class="wa-option" data-value="advanced" onclick="waSelect(this)">Advanced / League Experience</button>
+            </div>
+          </div>
+
+          <!-- Step 3: Name -->
+          <div class="wa-step">
+            <label class="wa-label" for="waName">Your Name</label>
+            <input type="text" id="waName" class="wa-input" placeholder="Enter your name">
+          </div>
+
+          <!-- Step 4: Optional message -->
+          <div class="wa-step">
+            <label class="wa-label" for="waMsg">Anything else? <span style="opacity:0.5">(optional)</span></label>
+            <textarea id="waMsg" class="wa-input" rows="3" placeholder="Tell us more..."></textarea>
+          </div>
+
+          <!-- Send Button -->
+          <a id="waSendBtn" href="#" target="_blank" rel="noopener" class="btn btn-whatsapp btn-full" onclick="return waBuildLink()">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M17.47 14.38c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.15-.2.29-.76.95-.93 1.14-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.59.13-.13.29-.34.44-.51.15-.17.2-.29.29-.48.1-.2.05-.37-.02-.51-.07-.15-.66-1.58-.9-2.17-.24-.56-.48-.49-.66-.5h-.56c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44 0 1.44 1.05 2.83 1.19 3.02.15.2 2.06 3.14 4.99 4.41.7.3 1.24.48 1.66.61.7.22 1.34.19 1.84.12.56-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.56-.34"/></svg>
+            Send via WhatsApp
           </a>
-          <a href="sms:+16475231638?body=Hi%20MCC%2C%20" class="contact-action-card">
-            <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#E8732C" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/><path fill="#E8732C" d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
-            <h4>Text Us</h4>
-            <p>+1 (647) 523-1638</p>
-          </a>
-          <a href="mailto:mcc.miltoncricketchamps@gmail.com?subject=MCC%20Inquiry" class="contact-action-card">
-            <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#0F1B3D" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            <h4>Email</h4>
-            <p>mcc.miltoncricketchamps@gmail.com</p>
-          </a>
+
+          <p style="text-align:center; margin-top:16px; color:#666; font-size:0.8rem;">
+            Or reach us directly: <a href="mailto:mcc.miltoncricketchamps@gmail.com" style="color:var(--orange);">mcc.miltoncricketchamps@gmail.com</a>
+            &nbsp;|&nbsp; <a href="sms:+16475231638" style="color:var(--orange);">Text +1 (647) 523-1638</a>
+          </p>
         </div>
       </div>
     </div>
