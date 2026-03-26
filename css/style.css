@@ -588,6 +588,16 @@ img { max-width: 100%; height: auto; display: block; }
   opacity: 1;
   color: var(--white);
 }
+.member-since {
+  font-size: 0.6rem;
+  color: var(--orange);
+  opacity: 0.6;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.member-bubble:hover .member-since {
+  opacity: 1;
+}
 
 /* --- CTA Section --- */
 .cta-section {
