@@ -52,12 +52,18 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.02, rootMargin: '0px 0px 50px 0px' });
 
     revealElements.forEach(function(el) {
       el.classList.add('reveal');
       observer.observe(el);
     });
+    // Fallback: force all visible after 2s in case observer doesn't fire (mobile)
+    setTimeout(function() {
+      revealElements.forEach(function(el) {
+        el.classList.add('visible');
+      });
+    }, 2000);
   }
 
   // --- Gallery filter ---
