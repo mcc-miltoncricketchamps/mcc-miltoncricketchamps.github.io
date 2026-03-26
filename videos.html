@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Watch Milton Cricket Champs live-streamed matches on YouTube.">
+  <meta name="description" content="Watch Milton Cricket Champs live-streamed matches and cricket events on YouTube.">
   <title>Videos | Milton Cricket Champs</title>
   <link rel="icon" type="image/jpeg" href="img/logo.jpeg">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
@@ -55,149 +55,158 @@
   </div>
   <div class="hero-overlay"></div>
   <div class="page-hero-content">
-    <h1>Match Videos</h1>
-    <p>Watch MCC live-streamed matches on YouTube</p>
+    <h1>Videos</h1>
+    <p>Watch MCC matches and events on YouTube</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="video-list">
-      <a href="https://www.youtube.com/watch?v=ambB2cnnkgQ" target="_blank" rel="noopener" class="video-card">
+    <div class="video-filters">
+      <button class="filter-btn active" data-filter="all">All (35)</button>
+      <button class="filter-btn" data-filter="live">Live Streaming (33)</button>
+      <button class="filter-btn" data-filter="event">Cricket Events (2)</button>
+    </div>
+    <div class="video-list" id="videoList">
+      <a href="https://www.youtube.com/watch?v=ambB2cnnkgQ" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/ambB2cnnkgQ/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Feb 15, 2026</span><span class="video-title">GTA Outlaws vs MCC - A | Game of Thrones (Super League)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Feb 15, 2026</span><span class="video-title">GTA Outlaws vs MCC - A | Game of Thrones (Super League)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=q4kLzcVOoWI" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=q4kLzcVOoWI" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/q4kLzcVOoWI/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Feb 7, 2026</span><span class="video-title">Alton Strikers vs MCC - B | Game of Thrones (Super League)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Feb 7, 2026</span><span class="video-title">Alton Strikers vs MCC - B | Game of Thrones (Super League)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=lJLrLuHw5u0" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=lJLrLuHw5u0" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/lJLrLuHw5u0/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Feb 1, 2026</span><span class="video-title">MCC - A vs Halton Falcons | Game of Thrones (Super League)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Feb 1, 2026</span><span class="video-title">MCC - A vs Halton Falcons | Game of Thrones (Super League)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=bnrAozZ6qgM" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=bnrAozZ6qgM" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/bnrAozZ6qgM/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Jan 24, 2026</span><span class="video-title">Alton Strikers vs MCC - A | Game of Thrones (Super League)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Jan 24, 2026</span><span class="video-title">Alton Strikers vs MCC - A | Game of Thrones (Super League)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=YMGvzgJD6E8" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=YMGvzgJD6E8" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/YMGvzgJD6E8/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Jan 11, 2026</span><span class="video-title">MCC - B vs The Swifters | Game of Thrones (Super League)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Jan 11, 2026</span><span class="video-title">MCC - B vs The Swifters | Game of Thrones (Super League)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=lG5i_aKPg2U" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=lG5i_aKPg2U" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/lG5i_aKPg2U/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Jan 4, 2026</span><span class="video-title">Trailblazers vs MCC - A | Game of Thrones (Super League)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Jan 4, 2026</span><span class="video-title">Trailblazers vs MCC - A | Game of Thrones (Super League)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=wmY8nk1HmOE" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=wmY8nk1HmOE" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/wmY8nk1HmOE/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Dec 21, 2025</span><span class="video-title">GTA Outlaws vs MCC - B | Game of Thrones (League)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Dec 21, 2025</span><span class="video-title">GTA Outlaws vs MCC - B | Game of Thrones (League)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=UwUV3-TOQ7I" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=UwUV3-TOQ7I" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/UwUV3-TOQ7I/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Nov 16, 2025</span><span class="video-title">Trailblazers vs MCC - A | Game of Thrones (League)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Nov 16, 2025</span><span class="video-title">Trailblazers vs MCC - A | Game of Thrones (League)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=wM7s3NRr3xM" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=wM7s3NRr3xM" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/wM7s3NRr3xM/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Nov 9, 2025</span><span class="video-title">Markhor Nawab vs MCC - B | Game of Thrones (League)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Nov 9, 2025</span><span class="video-title">Markhor Nawab vs MCC - B | Game of Thrones (League)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=kr9pEqIMtq4" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=kr9pEqIMtq4" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/kr9pEqIMtq4/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Nov 8, 2025</span><span class="video-title">Alton Strikers vs MCC - A | Game of Thrones (League)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Nov 8, 2025</span><span class="video-title">Alton Strikers vs MCC - A | Game of Thrones (League)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=8hcB1ujzo_I" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=8hcB1ujzo_I" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/8hcB1ujzo_I/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Nov 2, 2025</span><span class="video-title">The Swifters vs MCC - B | Game of Thrones (League)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Nov 2, 2025</span><span class="video-title">The Swifters vs MCC - B | Game of Thrones (League)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=Asukbr8hoEk" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=Asukbr8hoEk" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/Asukbr8hoEk/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Oct 19, 2025</span><span class="video-title">MCC - A vs YBCC | Game of Thrones (League)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Oct 19, 2025</span><span class="video-title">MCC - A vs YBCC | Game of Thrones (League)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=kl9JR3oHeQY" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=kl9JR3oHeQY" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/kl9JR3oHeQY/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Oct 18, 2025</span><span class="video-title">MCC - B vs Markhor United | Game of Thrones (League)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Oct 18, 2025</span><span class="video-title">MCC - B vs Markhor United | Game of Thrones (League)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=xHFa9-6KwCs" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=xHFa9-6KwCs" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/xHFa9-6KwCs/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Oct 12, 2025</span><span class="video-title">Milton Lions vs MCC - A | Game of Thrones (League)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Oct 12, 2025</span><span class="video-title">Milton Lions vs MCC - A | Game of Thrones (League)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=9TseQbbvEsA" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=9TseQbbvEsA" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/9TseQbbvEsA/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Oct 5, 2025</span><span class="video-title">MCC - A vs Bristol Lions CC | Game of Thrones (League)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Oct 5, 2025</span><span class="video-title">MCC - A vs Bristol Lions CC | Game of Thrones (League)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=XfDHHniRViE" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=XfDHHniRViE" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/XfDHHniRViE/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Sep 29, 2025</span><span class="video-title">BLCC vs MCC | Starry Night S3 (Semi Final)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Sep 29, 2025</span><span class="video-title">BLCC vs MCC | Starry Night S3 (Semi Final)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=h-Io3cR2GGY" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=h-Io3cR2GGY" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/h-Io3cR2GGY/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Sep 28, 2025</span><span class="video-title">Markhor Royals vs MCC - B | Game of Thrones (League)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Sep 28, 2025</span><span class="video-title">Markhor Royals vs MCC - B | Game of Thrones (League)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=xngUmxDzWWU" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=xngUmxDzWWU" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/xngUmxDzWWU/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Sep 8, 2025</span><span class="video-title">Lions CC vs MCC | Starry Night S3 (Round Two)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Sep 8, 2025</span><span class="video-title">Lions CC vs MCC | Starry Night S3 (Round Two)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=X_EgtZ3krKQ" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=X_EgtZ3krKQ" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/X_EgtZ3krKQ/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Aug 18, 2025</span><span class="video-title">MCC vs YBCC | Starry Night S3 (Round Two)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Aug 18, 2025</span><span class="video-title">MCC vs YBCC | Starry Night S3 (Round Two)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=cN2uZmfAanA" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=cN2uZmfAanA" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/cN2uZmfAanA/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Aug 11, 2025</span><span class="video-title">MCC vs Milton Panthers | Starry Night S3 (Round Two)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Aug 11, 2025</span><span class="video-title">MCC vs Milton Panthers | Starry Night S3 (Round Two)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=lI2TVPC6eck" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=lI2TVPC6eck" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/lI2TVPC6eck/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Aug 4, 2025</span><span class="video-title">MCC vs Churchill Warriors | Starry Night S3 (Round Two)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Aug 4, 2025</span><span class="video-title">MCC vs Churchill Warriors | Starry Night S3 (Round Two)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=5GuJwh8jQ4A" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=5GuJwh8jQ4A" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/5GuJwh8jQ4A/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Jul 28, 2025</span><span class="video-title">Stallions vs MCC | Starry Night S3 (Round Two)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Jul 28, 2025</span><span class="video-title">Stallions vs MCC | Starry Night S3 (Round Two)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=ZK3-Islth7g" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=ZK3-Islth7g" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/ZK3-Islth7g/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Jul 21, 2025</span><span class="video-title">Halton Hawks vs MCC | Starry Night S3 (Round Two)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Jul 21, 2025</span><span class="video-title">Halton Hawks vs MCC | Starry Night S3 (Round Two)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=xzj7xJ2rCyQ" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=xzj7xJ2rCyQ" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/xzj7xJ2rCyQ/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Jul 14, 2025</span><span class="video-title">Lions CC vs MCC | Starry Night S3 (Round One)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Jul 14, 2025</span><span class="video-title">Lions CC vs MCC | Starry Night S3 (Round One)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=QzD9s5q33Lk" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=QzD9s5q33Lk" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/QzD9s5q33Lk/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Jul 7, 2025</span><span class="video-title">BLCC vs MCC | Starry Night S3 (Round One)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Jul 7, 2025</span><span class="video-title">BLCC vs MCC | Starry Night S3 (Round One)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=eYUk5lqTsu4" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=eYUk5lqTsu4" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/eYUk5lqTsu4/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Jun 23, 2025</span><span class="video-title">MCC vs Markhor Royals | Starry Night S3 (Round One)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Jun 23, 2025</span><span class="video-title">MCC vs Markhor Royals | Starry Night S3 (Round One)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=tNnc-WRm9-k" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=tNnc-WRm9-k" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/tNnc-WRm9-k/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Jun 2, 2025</span><span class="video-title">MCC vs Churchill Warriors | Starry Night S3 (Round One)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Jun 2, 2025</span><span class="video-title">MCC vs Churchill Warriors | Starry Night S3 (Round One)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=bUInnIS-EWE" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=bUInnIS-EWE" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/bUInnIS-EWE/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">May 5, 2025</span><span class="video-title">MCC vs Halton Hawks | Starry Night S3 (Round One)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">May 5, 2025</span><span class="video-title">MCC vs Halton Hawks | Starry Night S3 (Round One)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=hqndj-DYTGM" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=hqndj-DYTGM" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/hqndj-DYTGM/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Feb 16, 2025</span><span class="video-title">Milton Lions vs MCC | Star Wars S1 (League)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Feb 16, 2025</span><span class="video-title">Milton Lions vs MCC | Star Wars S1 (League)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=mUpJvkehmw4" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=mUpJvkehmw4" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/mUpJvkehmw4/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Feb 2, 2025</span><span class="video-title">MCC vs Milton Stars | Star Wars S1 (League)</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Feb 2, 2025</span><span class="video-title">MCC vs Milton Stars | Star Wars S1 (League)</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=l4QKMNHT0Uc" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=l4QKMNHT0Uc" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/l4QKMNHT0Uc/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Jan 5, 2025</span><span class="video-title">Shawarma Royale vs MCC | Star Wars S1</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Jan 5, 2025</span><span class="video-title">Shawarma Royale vs MCC | Star Wars S1</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=Pg2khbOyxjQ" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=Pg2khbOyxjQ" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/Pg2khbOyxjQ/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Dec 1, 2024</span><span class="video-title">Markhor Sheild vs MCC | Star Wars S1</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Dec 1, 2024</span><span class="video-title">Markhor Sheild vs MCC | Star Wars S1</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=_WLqVqOU0kk" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=_WLqVqOU0kk" target="_blank" rel="noopener" class="video-card" data-category="live">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/_WLqVqOU0kk/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">Oct 27, 2024</span><span class="video-title">Markhor Royals vs MCC | Star Wars S1</span></div>
+        <div class="video-info"><span class="video-badge badge-live">Live Streaming</span><span class="video-date">Oct 27, 2024</span><span class="video-title">Markhor Royals vs MCC | Star Wars S1</span></div>
       </a>
-      <a href="https://www.youtube.com/watch?v=ygQPXQBXr-Y" target="_blank" rel="noopener" class="video-card">
+      <a href="https://www.youtube.com/watch?v=ygQPXQBXr-Y" target="_blank" rel="noopener" class="video-card" data-category="event">
         <div class="video-thumb"><img src="https://img.youtube.com/vi/ygQPXQBXr-Y/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
-        <div class="video-info"><span class="video-date">2023</span><span class="video-title">MCC Family Event 2023</span></div>
+        <div class="video-info"><span class="video-badge badge-event">Cricket Event</span><span class="video-date">2023</span><span class="video-title">MCC Family Event 2023</span></div>
+      </a>
+      <a href="https://www.youtube.com/watch?v=fd5Mv_zjOHI" target="_blank" rel="noopener" class="video-card" data-category="event">
+        <div class="video-thumb"><img src="https://img.youtube.com/vi/fd5Mv_zjOHI/mqdefault.jpg" alt="" loading="lazy"><div class="play-btn">&#9654;</div></div>
+        <div class="video-info"><span class="video-badge badge-event">Cricket Event</span><span class="video-date">2023</span><span class="video-title">MCC Family Gathering 2023</span></div>
       </a>
     </div>
   </div>

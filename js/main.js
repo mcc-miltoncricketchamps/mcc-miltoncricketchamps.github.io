@@ -75,17 +75,19 @@
     }, 2000);
   }
 
-  // --- Gallery filter ---
+  // --- Gallery / Video filter ---
   var filterBtns = document.querySelectorAll('.filter-btn');
   var galleryItems = document.querySelectorAll('.gallery-item');
+  var videoCards = document.querySelectorAll('.video-card[data-category]');
+  var filterableItems = galleryItems.length > 0 ? galleryItems : videoCards;
 
-  if (filterBtns.length > 0) {
+  if (filterBtns.length > 0 && filterableItems.length > 0) {
     filterBtns.forEach(function(btn) {
       btn.addEventListener('click', function() {
         filterBtns.forEach(function(b) { b.classList.remove('active'); });
         btn.classList.add('active');
         var filter = btn.getAttribute('data-filter');
-        galleryItems.forEach(function(item) {
+        filterableItems.forEach(function(item) {
           if (filter === 'all' || item.getAttribute('data-category') === filter) {
             item.classList.remove('hidden');
           } else {
