@@ -1144,6 +1144,22 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--text-gray);
   font-size: 0.85rem;
 }
+.site-views {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  color: var(--text-gray);
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.site-views.loaded { opacity: 1; }
+.site-views svg { width: 14px; height: 14px; fill: var(--orange); }
+.view-count {
+  font-weight: 600;
+  color: var(--orange);
+}
 
 /* --- Story Content (About) --- */
 .story-content {

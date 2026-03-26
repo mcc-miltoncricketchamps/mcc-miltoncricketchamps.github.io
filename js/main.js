@@ -119,6 +119,21 @@
     });
   }
 
+  // --- Site view counter ---
+  var viewEl = document.getElementById('siteViews');
+  if (viewEl) {
+    fetch('https://api.counterapi.dev/v1/mcc-miltoncricketchamps/website-views/up')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        var countEl = viewEl.querySelector('.view-count');
+        if (countEl && data.count) {
+          countEl.textContent = data.count.toLocaleString();
+          viewEl.classList.add('loaded');
+        }
+      })
+      .catch(function() {});
+  }
+
   // --- Contact form subject from URL ---
   var subjectSelect = document.getElementById('subject');
   if (subjectSelect) {
