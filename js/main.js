@@ -30,6 +30,15 @@
     });
   }
 
+  // --- Dropdown toggle (mobile) ---
+  document.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      var parent = this.closest('.nav-dropdown');
+      parent.classList.toggle('open');
+    });
+  });
+
   // --- Navbar scroll effect ---
   var navbar = document.getElementById('navbar');
   if (navbar) {
