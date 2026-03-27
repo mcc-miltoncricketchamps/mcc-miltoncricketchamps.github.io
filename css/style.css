@@ -122,8 +122,10 @@ img { max-width: 100%; height: auto; display: block; }
 .nav-logo { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; }
 .nav-links {
   display: flex;
+  align-items: center;
   list-style: none;
   gap: 8px;
+  flex-wrap: nowrap;
 }
 .nav-links li a {
   color: var(--white);
