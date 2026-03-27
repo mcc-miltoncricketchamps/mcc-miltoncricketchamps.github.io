@@ -130,10 +130,12 @@
     });
   }
 
-  // --- Site view counter ---
+  // --- Site view counter (2s timeout so slow API doesn't block page) ---
   var viewEl = document.getElementById('siteViews');
   if (viewEl) {
-    fetch('https://api.counterapi.dev/v1/mcc-miltoncricketchamps/website-views/up')
+    var controller = new AbortController();
+    setTimeout(function() { controller.abort(); }, 2000);
+    fetch('https://api.counterapi.dev/v1/mcc-miltoncricketchamps/website-views/up', { signal: controller.signal })
       .then(function(r) { return r.json(); })
       .then(function(data) {
         var countEl = viewEl.querySelector('.view-count');
@@ -145,19 +147,14 @@
       .catch(function() {});
   }
 
-  // --- Contact form subject from URL ---
-  var subjectSelect = document.getElementById('subject');
-  if (subjectSelect) {
-    var params = new URLSearchParams(window.location.search);
-    var subjectParam = params.get('subject');
-    if (subjectParam) {
-      for (var i = 0; i < subjectSelect.options.length; i++) {
-        if (subjectSelect.options[i].value === subjectParam) {
-          subjectSelect.selectedIndex = i;
-          break;
-        }
-      }
-    }
+  // --- Pre-select contact reason from URL (e.g. ?subject=sponsorship) ---
+  var params = new URLSearchParams(window.location.search);
+  var subjectParam = params.get('subject');
+  if (subjectParam) {
+    var reasonMap = { 'sponsorship': 'sponsor', 'join': 'join', 'general': 'general' };
+    var val = reasonMap[subjectParam] || subjectParam;
+    var btn = document.querySelector('#waReason .wa-option[data-value="' + val + '"]');
+    if (btn) btn.click();
   }
 
   // --- Leaderboard tabs ---
