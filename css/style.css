@@ -1469,6 +1469,22 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 0.8rem;
   color: var(--text-gray);
 }
+/* Recent Results */
+.recent-win { border-left-color: #4CAF50; }
+.recent-loss { border-left-color: #ef5350; }
+.recent-score {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  margin-bottom: 6px;
+}
+.recent-result {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.recent-win .recent-result { color: #4CAF50; }
+.recent-loss .recent-result { color: #ef5350; }
+
 .no-upcoming {
   text-align: center;
   color: var(--text-gray);
