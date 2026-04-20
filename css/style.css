@@ -1003,23 +1003,43 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 }
 
-/* --- Current Sponsor --- */
-.current-sponsor {
+/* --- Sponsors by Season --- */
+.sponsors-by-season {
+  max-width: 1000px;
+  margin: 32px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.sponsor-season {
   background: var(--card-bg);
   border-radius: var(--radius);
-  padding: 48px 32px;
-  max-width: 600px;
-  margin: 32px auto 0;
+  padding: 32px 24px;
   border: 1px solid rgba(245,166,35,0.2);
 }
+.sponsor-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+.sponsor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+  max-width: 260px;
+  flex: 0 1 220px;
+}
 .sponsor-logo {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   object-fit: contain;
   border-radius: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   background: #fff;
-  padding: 8px;
+  padding: 10px;
 }
 .sponsor-year {
   font-size: 0.85rem;
@@ -1027,13 +1047,14 @@ img { max-width: 100%; height: auto; display: block; }
   letter-spacing: 2px;
   color: var(--text-gray);
   margin-bottom: 8px;
+  text-align: center;
 }
 .sponsor-name {
-  font-size: 2rem;
+  font-size: 1.25rem;
   color: var(--gold);
-  margin-bottom: 12px;
+  margin: 0;
+  text-align: center;
 }
-.current-sponsor p:last-child { color: var(--text-gray); }
 
 /* --- Transparency Embed --- */
 .transparency-embed {
