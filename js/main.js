@@ -130,22 +130,28 @@
     });
   }
 
-  // --- Site view counter ---
+  // --- Site view counter (Abacus API + 1020 offset from old counterapi.dev) ---
   var viewEl = document.getElementById('siteViews');
   if (viewEl) {
     var BASE_VIEWS = 1020;
     var countEl = viewEl.querySelector('.view-count');
-    // Track unique sessions locally to keep counter growing
-    var stored = parseInt(localStorage.getItem('mcc_extra_views') || '0', 10);
-    if (!sessionStorage.getItem('mcc_counted')) {
-      stored++;
-      localStorage.setItem('mcc_extra_views', stored);
-      sessionStorage.setItem('mcc_counted', '1');
-    }
-    if (countEl) {
-      countEl.textContent = (BASE_VIEWS + stored).toLocaleString();
-      viewEl.classList.add('loaded');
-    }
+    var controller = new AbortController();
+    setTimeout(function() { controller.abort(); }, 3000);
+    fetch('https://abacus.jasoncameron.dev/hit/mcc-miltoncricketchamps/website-views', { signal: controller.signal })
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (countEl && data.value) {
+          countEl.textContent = (BASE_VIEWS + data.value).toLocaleString();
+          viewEl.classList.add('loaded');
+        }
+      })
+      .catch(function() {
+        // Fallback: show base count if API fails
+        if (countEl) {
+          countEl.textContent = BASE_VIEWS.toLocaleString() + '+';
+          viewEl.classList.add('loaded');
+        }
+      });
   }
 
   // --- Pre-select contact reason from URL (e.g. ?subject=sponsorship) ---
