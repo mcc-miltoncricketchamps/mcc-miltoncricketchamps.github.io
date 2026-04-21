@@ -1104,6 +1104,10 @@ img { max-width: 100%; height: auto; display: block; }
 .sponsor-logo--bleed {
   background: transparent;
   padding: 0;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 10px;
 }
 .sponsor-card--gold .sponsor-logo {
   max-width: 260px;
