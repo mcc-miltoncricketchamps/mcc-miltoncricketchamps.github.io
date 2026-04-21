@@ -1102,12 +1102,23 @@ img { max-width: 100%; height: auto; display: block; }
   text-align: center;
 }
 
-/* --- Transparency Embed --- */
-.transparency-embed {
-  margin-top: 32px;
+/* --- Financial Transparency Note --- */
+.transparency-note {
+  max-width: 720px;
+  margin: 32px auto 0;
+  padding: 32px 28px;
+  background: var(--card-bg);
+  border: 1px solid rgba(245,166,35,0.2);
   border-radius: var(--radius);
-  overflow: hidden;
   box-shadow: var(--shadow);
+}
+.transparency-note p {
+  color: var(--text-gray);
+  line-height: 1.7;
+  margin: 0;
+}
+.transparency-note strong {
+  color: var(--gold);
 }
 
 /* --- CricHeroes Section --- */
