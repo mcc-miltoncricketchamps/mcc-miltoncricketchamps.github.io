@@ -1025,6 +1025,9 @@ img { max-width: 100%; height: auto; display: block; }
   gap: 24px;
   margin-top: 8px;
 }
+.sponsor-row + .sponsor-row {
+  margin-top: 28px;
+}
 .sponsor-card {
   display: flex;
   flex-direction: column;
