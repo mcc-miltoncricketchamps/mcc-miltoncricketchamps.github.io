@@ -1490,6 +1490,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .a-stat-win .a-stat-num { color: #4CAF50; }
 .a-stat-loss .a-stat-num { color: #ef5350; }
+.a-stat-abandoned .a-stat-num { color: #90a4ae; }
 .a-stat-pct .a-stat-num { color: var(--gold); }
 
 /* Refresh Badge */
@@ -1531,6 +1532,15 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 0.9rem;
   min-width: 40px;
 }
+.wl-abandoned {
+  background: linear-gradient(135deg, #90a4ae, #546e7a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  min-width: 40px;
+}
 
 /* Tables */
 .opponents-table, .matches-table { margin-top: 32px; overflow-x: auto; }
@@ -1563,6 +1573,7 @@ img { max-width: 100%; height: auto; display: block; }
 .opp-bad { color: #ef5350; font-weight: 700; }
 .match-win td:last-child { color: #4CAF50; font-weight: 600; }
 .match-loss td:last-child { color: #ef5350; font-weight: 600; }
+.match-abandoned td:last-child { color: #90a4ae; font-weight: 600; }
 
 /* Upcoming Matches */
 .upcoming-grid {
@@ -1609,6 +1620,8 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .recent-win .recent-result { color: #4CAF50; }
 .recent-loss .recent-result { color: #ef5350; }
+.recent-abandoned { border-left-color: #90a4ae; }
+.recent-abandoned .recent-result { color: #90a4ae; }
 
 .no-upcoming {
   text-align: center;
