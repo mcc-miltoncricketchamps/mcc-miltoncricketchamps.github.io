@@ -180,6 +180,15 @@
     });
   }
 
+  var yearlySelect = document.getElementById('yearly-leaderboard-year');
+  if (yearlySelect) {
+    yearlySelect.addEventListener('change', function() {
+      document.querySelectorAll('.yearly-leaderboard-panel').forEach(function(panel) {
+        panel.classList.toggle('active', panel.getAttribute('data-year') === yearlySelect.value);
+      });
+    });
+  }
+
 })();
 
 // --- WhatsApp Message Builder ---

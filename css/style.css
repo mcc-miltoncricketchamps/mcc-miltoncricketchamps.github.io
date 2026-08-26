@@ -1669,6 +1669,47 @@ img { max-width: 100%; height: auto; display: block; }
 .lb-panel.active { display: block; }
 .lb-panel table a { color: var(--orange); font-weight: 500; }
 .lb-panel table a:hover { color: var(--gold); }
+.yearly-leaderboard {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.yearly-leaderboard-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+.yearly-leaderboard-heading h3 { margin: 0; }
+.yearly-leaderboard-heading label {
+  color: var(--text-gray);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.yearly-leaderboard-heading select {
+  margin-left: 8px;
+  padding: 8px 28px 8px 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 6px;
+  background: var(--card-bg);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+}
+.yearly-leaderboard-panel { display: none; }
+.yearly-leaderboard-panel.active { display: block; }
+.yearly-leaderboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.yearly-leaderboard-card {
+  min-width: 0;
+  padding: 20px;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+}
+.yearly-leaderboard-card h4 { margin: 0 0 12px; color: var(--gold); }
 
 /* Tournament column */
 .tournament-col { font-size: 0.8rem; color: var(--text-gray); max-width: 180px; }
@@ -1817,6 +1858,7 @@ img { max-width: 100%; height: auto; display: block; }
   .formats-grid { grid-template-columns: repeat(2, 1fr); }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
   .analytics-stats { grid-template-columns: repeat(2, 1fr); }
+  .yearly-leaderboard-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr; }
   .gallery-filters { gap: 8px; }
   .filter-btn { padding: 8px 16px; font-size: 0.8rem; }
