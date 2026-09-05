@@ -1,0 +1,90 @@
+{
+  "event": {
+    "year": 2026,
+    "edition": "The 2nd MCC Awards",
+    "gathering": "3rd Annual MCC Family Gathering",
+    "countdown_at": null
+  },
+  "voting": {
+    "enabled": true,
+    "api_url": "https://script.google.com/macros/s/AKfycbxkoWf-VmTpwpNKs0j94nqjmlPHlkPq0f0vrt5bWwtJqab3W3azSkH8zYoAy9wlx0iYrw/exec"
+  },
+  "sections": [
+    {
+      "id": "fun",
+      "eyebrow": "Section 1",
+      "title": "MCC Fun Awards",
+      "icon": "😂",
+      "tone": "fun"
+    },
+    {
+      "id": "recognition",
+      "eyebrow": "Section 2",
+      "title": "MCC Recognition Awards",
+      "icon": "🏏",
+      "tone": "recognition"
+    }
+  ],
+  "categories": [
+    {
+      "id": "late-lateef",
+      "number": "01",
+      "section": "fun",
+      "icon": "🕵️",
+      "name": "Haan Bolke Na Aane Waala",
+      "subtitle": "Late Lateef / Haan Bolke Na Aane Waala",
+      "description": "For the MCC member who is famous for “Haan bhai, aa raha hoon!” ...and then somehow doesn't. The ultimate master of last-minute cancellations, disappearing acts and “Bhai next time pakka.”",
+      "highlight": "Haan bhai, aa raha hoon! 😂"
+    },
+    {
+      "id": "bakar-champion",
+      "number": "02",
+      "section": "fun",
+      "icon": "🗣️",
+      "name": "Sabse Zyaada Bakar Award",
+      "subtitle": "MCC Bakar & Banter Champion",
+      "description": "For the player whose bakar never stops. Before the match. During the match. After the match. And definitely on WhatsApp.",
+      "highlight": "Batting ho ya bakar — performance consistent honi chahiye! 😂"
+    },
+    {
+      "id": "gyaan-baba",
+      "number": "03",
+      "section": "fun",
+      "icon": "🧠",
+      "name": "Gyaan Baba Award",
+      "subtitle": "MCC Gyaan Baba — Ultimate Cricket Expert",
+      "description": "For the person who always has advice, analysis, strategy, opinions and solutions — whether anyone asked for them or not.",
+      "highlight": "Match ka result kuch bhi ho — Gyaan Baba ko sab pehle se pata tha! 😂"
+    },
+    {
+      "id": "most-improved",
+      "number": "04",
+      "section": "recognition",
+      "icon": "📈",
+      "name": "Most Improved Player",
+      "subtitle": "MCC Most Improved Player — 2026",
+      "description": "For the player who showed the biggest improvement this year through performance, consistency, skills, confidence and overall contribution.",
+      "highlight": "Celebrating genuine growth during the 2026 season."
+    },
+    {
+      "id": "rising-star",
+      "number": "05",
+      "section": "recognition",
+      "icon": "🚀",
+      "name": "MCC Rising Star",
+      "subtitle": "Best Upcoming Potential — MCC Rising Star",
+      "description": "For the player who has shown serious potential and looks ready to become one of MCC's standout players in the future.",
+      "highlight": "Watch this space... 👀🔥"
+    },
+    {
+      "id": "best-find",
+      "number": "06",
+      "section": "recognition",
+      "icon": "🔎",
+      "name": "MCC Best Find — 2026",
+      "subtitle": "MCC Best Find of 2026",
+      "description": "For one of MCC's best discoveries or additions of 2026 — a new or returning player who made an impact, fit naturally into the team and contributed on or off the field.",
+      "highlight": "A great addition who made MCC even stronger."
+    }
+  ]
+}

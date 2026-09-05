@@ -1,0 +1,287 @@
+{
+  "source": "CricHeroes",
+  "generated_from": "mcc_player_stats.json",
+  "player_count": 70,
+  "players": [
+    {
+      "id": "25905554",
+      "name": "Abhishek"
+    },
+    {
+      "id": "42704848",
+      "name": "Abhishek K"
+    },
+    {
+      "id": "16268829",
+      "name": "Abhishek Kamle"
+    },
+    {
+      "id": "32975016",
+      "name": "Adi Shanbhag"
+    },
+    {
+      "id": "42704603",
+      "name": "Aditya V"
+    },
+    {
+      "id": "30807880",
+      "name": "Aditya Verma"
+    },
+    {
+      "id": "40952935",
+      "name": "Akhil Pandey"
+    },
+    {
+      "id": "25868968",
+      "name": "Akshay Peshwe"
+    },
+    {
+      "id": "15467843",
+      "name": "Allwyn"
+    },
+    {
+      "id": "32012446",
+      "name": "Animesh Kumar"
+    },
+    {
+      "id": "25868412",
+      "name": "Ankiit GGadhiya"
+    },
+    {
+      "id": "ankur mangla",
+      "name": "Ankur Mangla"
+    },
+    {
+      "id": "32480254",
+      "name": "Badulla G"
+    },
+    {
+      "id": "9533895",
+      "name": "Bhavesh Rane"
+    },
+    {
+      "id": "51927840",
+      "name": "Bhavik M"
+    },
+    {
+      "id": "25868811",
+      "name": "Bhavik Mody"
+    },
+    {
+      "id": "39618303",
+      "name": "Bhupinder Arora"
+    },
+    {
+      "id": "5667340",
+      "name": "Damanvir Singh"
+    },
+    {
+      "id": "25868807",
+      "name": "Deepak Morey"
+    },
+    {
+      "id": "25868809",
+      "name": "Dhiraj Kochar"
+    },
+    {
+      "id": "32694814",
+      "name": "Dinesh Rajendran"
+    },
+    {
+      "id": "30748489",
+      "name": "Gautam grover"
+    },
+    {
+      "id": "6268118",
+      "name": "Hemant Sachdeva"
+    },
+    {
+      "id": "25868793",
+      "name": "Himanshu Kharat"
+    },
+    {
+      "id": "9109492",
+      "name": "Jaffin Antony"
+    },
+    {
+      "id": "48388733",
+      "name": "Janak Nema"
+    },
+    {
+      "id": "2818944",
+      "name": "Jaydeep Bhatt"
+    },
+    {
+      "id": "42693152",
+      "name": "Jayesh"
+    },
+    {
+      "id": "32011203",
+      "name": "Jayesh N"
+    },
+    {
+      "id": "21633522",
+      "name": "Linto Thomas"
+    },
+    {
+      "id": "51928098",
+      "name": "Maddy G"
+    },
+    {
+      "id": "42382732",
+      "name": "Manas k"
+    },
+    {
+      "id": "25904857",
+      "name": "Mandar Patil"
+    },
+    {
+      "id": "40951512",
+      "name": "Manush Raval"
+    },
+    {
+      "id": "22535787",
+      "name": "Mayur"
+    },
+    {
+      "id": "21856223",
+      "name": "Mayur Mhetre"
+    },
+    {
+      "id": "32460484",
+      "name": "Mohit Joshi"
+    },
+    {
+      "id": "51524294",
+      "name": "Mohit Sharma"
+    },
+    {
+      "id": "17289546",
+      "name": "Muralidhar Reddy"
+    },
+    {
+      "id": "30745060",
+      "name": "Nachiket S"
+    },
+    {
+      "id": "42704472",
+      "name": "Nachiket Sahasrabudhe"
+    },
+    {
+      "id": "30844333",
+      "name": "Narendra Thippappa"
+    },
+    {
+      "id": "29717969",
+      "name": "Naveen"
+    },
+    {
+      "id": "25869015",
+      "name": "Neel Kulkarni"
+    },
+    {
+      "id": "25870080",
+      "name": "Nikhil Bhate"
+    },
+    {
+      "id": "25868834",
+      "name": "Pankaj Yawalkar"
+    },
+    {
+      "id": "pradeep kumar venkata pragada",
+      "name": "Pradeep Kumar Venkata Pragada"
+    },
+    {
+      "id": "30731445",
+      "name": "Prateek chawla"
+    },
+    {
+      "id": "32608880",
+      "name": "Raghava Reddy Eda"
+    },
+    {
+      "id": "13893407",
+      "name": "Rakesh Save"
+    },
+    {
+      "id": "29368049",
+      "name": "Rishi"
+    },
+    {
+      "id": "51524050",
+      "name": "Rohit Walia"
+    },
+    {
+      "id": "49311313",
+      "name": "Rutul Doshi"
+    },
+    {
+      "id": "30808186",
+      "name": "Sachin Deshpande"
+    },
+    {
+      "id": "25868813",
+      "name": "Sachin Sakpal"
+    },
+    {
+      "id": "25868844",
+      "name": "Saroj Mishra"
+    },
+    {
+      "id": "32557535",
+      "name": "Satbir Turna"
+    },
+    {
+      "id": "25868801",
+      "name": "Saurabh Shirode"
+    },
+    {
+      "id": "31762250",
+      "name": "Shahzad Ahmad"
+    },
+    {
+      "id": "19807009",
+      "name": "Sreemith"
+    },
+    {
+      "id": "42622650",
+      "name": "Sukhi Mann"
+    },
+    {
+      "id": "6747214",
+      "name": "Suri"
+    },
+    {
+      "id": "25868805",
+      "name": "Taha Mohyuddin"
+    },
+    {
+      "id": "51740884",
+      "name": "Tejas Shah"
+    },
+    {
+      "id": "21963160",
+      "name": "Uday Bhagat"
+    },
+    {
+      "id": "52724506",
+      "name": "Vihar"
+    },
+    {
+      "id": "23131283",
+      "name": "Vinay Kadam"
+    },
+    {
+      "id": "32011284",
+      "name": "Vipul Save"
+    },
+    {
+      "id": "9081393",
+      "name": "Vishal Chandra"
+    },
+    {
+      "id": "32785165",
+      "name": "Vishal N"
+    }
+  ]
+}
