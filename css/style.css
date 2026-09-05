@@ -1767,6 +1767,42 @@ img { max-width: 100%; height: auto; display: block; }
    RESPONSIVE
    ============================================================ */
 
+@media (max-width: 1100px) {
+  .hamburger { display: block; }
+  .nav-links {
+    position: fixed;
+    top: 0; right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: var(--navy-dark);
+    flex-direction: column;
+    padding: 80px 32px 32px;
+    gap: 4px;
+    transition: right var(--transition);
+    box-shadow: -4px 0 20px rgba(0,0,0,0.5);
+  }
+  .nav-links.active { right: 0; }
+  .nav-links li a {
+    display: block;
+    padding: 12px 16px;
+    font-size: 1rem;
+  }
+  .nav-links li a.active::after { display: none; }
+  .nav-links li a.active { background: rgba(232,115,44,0.15); }
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 0 0 0 16px;
+    display: none;
+  }
+  .nav-dropdown.open .dropdown-menu { display: block; }
+  .dropdown-menu li a { padding: 10px 16px; font-size: 0.95rem; }
+}
+
 @media (max-width: 1024px) {
   .footer-container { grid-template-columns: 1fr 1fr; }
   .sponsor-layout { grid-template-columns: 1fr; }
