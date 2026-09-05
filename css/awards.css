@@ -18,19 +18,6 @@
   border: 0 !important;
 }
 
-.nav-awards > a {
-  color: var(--gold) !important;
-  border: 1px solid rgba(245, 166, 35, 0.42);
-  background: rgba(245, 166, 35, 0.08);
-  font-weight: 700 !important;
-}
-.nav-awards > a:hover,
-.nav-awards > a.active {
-  color: var(--navy-dark) !important;
-  background: linear-gradient(135deg, var(--gold), #ffd979) !important;
-}
-.nav-awards > a.active::after { display: none; }
-
 .awards-hero {
   position: relative;
   min-height: min(860px, 92vh);
