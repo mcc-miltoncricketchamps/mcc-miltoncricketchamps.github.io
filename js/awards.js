@@ -5,7 +5,8 @@
     config: null,
     players: [],
     selections: {},
-    submitting: false
+    submitting: false,
+    votingClosed: false
   };
 
   var root = document.getElementById('awardsApp');
@@ -166,7 +167,7 @@
   }
 
   function initializeCountdown() {
-    var value = state.config.event.countdown_at;
+    var value = state.config.voting.closes_at || state.config.event.countdown_at;
     if (!value) return;
     var target = new Date(value);
     if (isNaN(target.getTime())) return;
@@ -183,9 +184,44 @@
         var element = document.getElementById('countdown-' + pair[0]);
         if (element) element.textContent = String(pair[1]).padStart(2, '0');
       });
+      if (remaining === 0) closeVoting();
     }
     tick();
     window.setInterval(tick, 1000);
+  }
+
+  function isVotingClosed() {
+    var value = state.config && (state.config.voting.closes_at || state.config.event.countdown_at);
+    var target = value ? new Date(value) : null;
+    return Boolean(target && !isNaN(target.getTime()) && Date.now() >= target.getTime());
+  }
+
+  function closeVoting() {
+    if (state.votingClosed) return;
+    state.votingClosed = true;
+    document.body.classList.add('voting-closed');
+    var countdown = document.getElementById('awardsCountdown');
+    var title = document.getElementById('countdown-title');
+    var copy = document.getElementById('countdown-copy');
+    var heroButton = document.getElementById('awardsHeroVoteButton');
+    var button = document.getElementById('awardsSubmit');
+    var preview = document.getElementById('awardsPreviewNote');
+    var formTitle = document.querySelector('#awardsVoteForm h2');
+    var formCopy = document.querySelector('#awardsVoteForm > p:not(.awards-eyebrow):not(.awards-preview-note):not(.awards-form-message)');
+    if (countdown) countdown.classList.add('closed');
+    if (title) title.textContent = '🏆 Voting Is Officially Closed';
+    if (copy) copy.textContent = 'Thank you to everyone who voted. The final standings are shown below.';
+    if (heroButton) {
+      heroButton.textContent = '🏆 View Official Results';
+      heroButton.href = '#awardsCategories';
+    }
+    if (button) button.disabled = true;
+    if (formTitle) formTitle.textContent = 'Voting Is Officially Closed 🔒';
+    if (formCopy) formCopy.textContent = 'Thank you, MCC! The final vote standings are now official.';
+    if (preview) {
+      preview.hidden = false;
+      preview.textContent = 'No further submissions will be accepted.';
+    }
   }
 
   function initializeSubmission() {
@@ -194,8 +230,12 @@
     var preview = document.getElementById('awardsPreviewNote');
     var enabled = Boolean(state.config.voting.enabled) &&
       /^https:\/\/script\.google\.com\//.test(state.config.voting.api_url || '');
+    state.votingClosed = isVotingClosed();
 
-    if (!enabled) {
+    if (state.votingClosed) {
+      state.votingClosed = false;
+      closeVoting();
+    } else if (!enabled) {
       button.disabled = true;
       button.textContent = '🏆 VOTING OPENS SOON';
       preview.hidden = false;
@@ -225,6 +265,11 @@
 
   function submitVotes() {
     if (state.submitting) return;
+    if (isVotingClosed()) {
+      closeVoting();
+      showMessage('MCC Awards voting is officially closed.');
+      return;
+    }
     var categories = state.config.categories;
     var missing = categories.filter(function(category) { return !state.selections[category.id]; });
     if (missing.length) {
@@ -267,7 +312,10 @@
       body: JSON.stringify(payload),
       redirect: 'follow'
     }).then(checkResponse).then(function(result) {
-      if (!result.ok) throw new Error(result.message || 'Your votes could not be submitted.');
+      if (!result.ok) {
+        if (result.code === 'VOTING_CLOSED') closeVoting();
+        throw new Error(result.message || 'Your votes could not be submitted.');
+      }
       try { window.localStorage.setItem('mcc-awards-2026-submitted', 'true'); } catch (error) {}
       showSuccess();
     }).catch(function(error) {

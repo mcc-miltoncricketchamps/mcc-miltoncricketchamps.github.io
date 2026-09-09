@@ -3,10 +3,11 @@
     "year": 2026,
     "edition": "The 2nd MCC Awards",
     "gathering": "3rd Annual MCC Family Gathering",
-    "countdown_at": null
+    "countdown_at": "2026-09-09T12:31:50-04:00"
   },
   "voting": {
     "enabled": true,
+    "closes_at": "2026-09-09T12:31:50-04:00",
     "api_url": "https://script.google.com/macros/s/AKfycbxkoWf-VmTpwpNKs0j94nqjmlPHlkPq0f0vrt5bWwtJqab3W3azSkH8zYoAy9wlx0iYrw/exec"
   },
   "sections": [

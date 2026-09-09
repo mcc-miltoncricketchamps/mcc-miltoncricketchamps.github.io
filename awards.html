@@ -98,7 +98,7 @@
         <p>From the cricket field to the WhatsApp group, we've had unforgettable matches, friendships, celebrations, arguments, excuses, analysis and — of course — plenty of <strong>bakar</strong>. 😂 Now it's your turn to decide who deserves the bragging rights.</p>
       </div>
       <div class="awards-hero-actions">
-        <a href="#vote" class="btn awards-primary-btn">🔥 Cast Your Votes 🔥</a>
+        <a href="#vote" class="btn awards-primary-btn" id="awardsHeroVoteButton">🔥 Cast Your Votes 🔥</a>
         <a href="#awardsCategories" class="btn btn-outline">🏆 View Awards</a>
       </div>
       <div class="awards-share-row">
@@ -141,7 +141,7 @@
     <div class="container">
       <p class="awards-eyebrow">The Countdown Is On... ⏳</p>
       <h2 id="countdown-title">🏆 MCC Awards 2026</h2>
-      <p>Results revealed at the 3rd Annual MCC Family Gathering</p>
+      <p id="countdown-copy">Voting officially closes at 12:31 PM ET today</p>
       <div class="countdown-grid">
         <div class="countdown-unit"><strong id="countdown-days">00</strong><span>Days</span></div>
         <div class="countdown-unit"><strong id="countdown-hours">00</strong><span>Hours</span></div>
@@ -160,7 +160,8 @@
           <li>Voting is anonymous. Your contact is hashed only to prevent repeat submissions.</li>
           <li>Please choose wisely — these awards are in your hands!</li>
           <li>Votes for yourself will not be counted.</li>
-          <li>Results and vote counts stay hidden until the official MCC Awards announcement.</li>
+          <li>Results and vote counts remain private until the official MCC Awards announcement.</li>
+          <li>Voting officially closes at 12:31 PM ET today.</li>
         </ul>
       </div>
       <form class="awards-final-card" id="awardsVoteForm" novalidate>
@@ -173,7 +174,7 @@
           <small class="voter-privacy">🔒 Your contact is never saved. Only a private one-way hash is stored.</small>
         </div>
         <button class="awards-submit-btn" id="awardsSubmit" type="submit">🏆 Submit My MCC Votes</button>
-        <p class="awards-preview-note" id="awardsPreviewNote" hidden>The ceremony page is ready. Secure voting will open after the private response Sheet is connected.</p>
+        <p class="awards-preview-note" id="awardsPreviewNote" hidden></p>
         <p class="awards-form-message" id="awardsFormMessage" role="alert"></p>
       </form>
     </div>

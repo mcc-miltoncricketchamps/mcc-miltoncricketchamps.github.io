@@ -448,6 +448,17 @@
   font-weight: 700;
 }
 
+.voting-closed .awards-progress,
+.voting-closed .award-question,
+.voting-closed .award-search-wrap,
+.voting-closed .nominee-grid,
+.voting-closed .award-selected-summary,
+.voting-closed .voter-contact-group {
+  display: none;
+}
+.voting-closed .awards-submit-btn { display: none; }
+.voting-closed .awards-final-card { border-color: rgba(245,196,81,0.35); }
+
 .awards-countdown {
   display: none;
   padding: 65px 0;
@@ -455,6 +466,8 @@
   text-align: center;
 }
 .awards-countdown.visible { display: block; }
+.awards-countdown.closed .countdown-grid { display: none; }
+.awards-countdown.closed #countdown-title { color: var(--awards-gold); }
 .countdown-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(70px, 125px));
