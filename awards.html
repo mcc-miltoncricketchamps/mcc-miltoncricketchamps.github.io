@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Vote in the 2nd MCC Awards at the 3rd Annual MCC Family Gathering — cricket, community, memories and unlimited bakar.">
+  <meta name="description" content="Official MCC Awards 2026 results — complete community vote standings and 2026 performance award winners.">
   <title>MCC Awards 2026 | Milton Cricket Champs</title>
   <link rel="icon" type="image/jpeg" href="img/logo.jpeg">
   <!-- Open Graph -->
   <meta property="og:title" content="MCC Awards 2026 | Milton Cricket Champs">
-  <meta property="og:description" content="Vote in the 2nd MCC Awards at the 3rd Annual MCC Family Gathering — cricket, community, memories and unlimited bakar.">
+  <meta property="og:description" content="Official MCC Awards 2026 results — complete community vote standings and 2026 performance award winners.">
   <meta property="og:image" content="https://mcc-miltoncricketchamps.github.io/img/logo.jpeg">
   <meta property="og:type" content="website">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
@@ -89,17 +89,17 @@
     <div class="awards-hero-inner">
       <img src="img/logo.jpeg" alt="Milton Cricket Champs" class="awards-hero-logo">
       <span class="awards-trophy" aria-hidden="true">🏆</span>
-      <p class="awards-eyebrow">🏆 The 2nd MCC Awards</p>
-      <h1 id="awards-title">The MCC Awards <span>2026</span></h1>
-      <p class="awards-hero-tagline">4+ Years of Cricket. Countless Memories. Unlimited Bakar.</p>
+      <p class="awards-eyebrow">🏆 The 2nd MCC Awards — Official Results</p>
+      <h1 id="awards-title">The MCC Awards <span>2026 Winners</span></h1>
+      <p class="awards-hero-tagline">The Votes Are Counted. The Champions Are Official.</p>
       <div class="awards-hero-copy">
-        <p><strong>We did it once. Now we're doing it again! 🔥</strong></p>
-        <p>As part of our <strong>3rd Annual MCC Family Gathering</strong>, MCC is bringing back the Awards for the <strong>second time</strong>!</p>
-        <p>From the cricket field to the WhatsApp group, we've had unforgettable matches, friendships, celebrations, arguments, excuses, analysis and — of course — plenty of <strong>bakar</strong>. 😂 Now it's your turn to decide who deserves the bragging rights.</p>
+        <p><strong>MCC has spoken! 🔥</strong></p>
+        <p>Our community votes are final, our season statistics are complete, and the winners of the <strong>2nd MCC Awards</strong> are ready to be celebrated.</p>
+        <p>Explore every vote from the six community categories and meet the four players recognized for outstanding 2026 performance.</p>
       </div>
       <div class="awards-hero-actions">
-        <a href="#vote" class="btn awards-primary-btn" id="awardsHeroVoteButton">🔥 Cast Your Votes 🔥</a>
-        <a href="#awardsCategories" class="btn btn-outline">🏆 View Awards</a>
+        <a href="#awardsCategories" class="btn awards-primary-btn" id="awardsHeroVoteButton">🏆 View Official Results</a>
+        <a href="analytics.html" class="btn btn-outline">📊 View MCC Analytics</a>
       </div>
       <div class="awards-share-row">
         <button type="button" class="awards-share" id="awardsShare">📲 Share the MCC Awards</button>
@@ -107,11 +107,11 @@
     </div>
   </section>
 
-  <section class="awards-intro" id="vote">
+  <section class="awards-intro" id="results">
     <div class="container">
-      <p class="awards-eyebrow">MCC Awards 2026</p>
-      <h2>Your Vote. Your Call. Our Awards. 🏆</h2>
-      <p>The nominations are in. Now it's time to decide who takes home the bragging rights!</p>
+      <p class="awards-eyebrow">MCC Awards 2026 — Results</p>
+      <h2>And the Winners Are... 🏆</h2>
+      <p>Celebrating the personalities, progress and performances that made MCC's 2026 season unforgettable.</p>
       <div class="awards-ceremony-line" aria-label="MCC Awards story">
         <span>4+ Years of MCC</span>
         <span>Countless Matches</span>
@@ -123,7 +123,7 @@
   </section>
 
   <section class="awards-voting-shell" id="awardsCategories">
-    <div class="awards-progress" aria-live="polite">
+    <div class="awards-progress" aria-live="polite" hidden>
       <div class="awards-progress-copy">
         <span>Voting Progress</span>
         <strong id="awardsProgressCount">0 of 6 Awards</strong>
@@ -151,7 +151,7 @@
     </div>
   </section>
 
-  <section class="awards-submit-section">
+  <section class="awards-submit-section" hidden>
     <div class="container">
       <div class="awards-rules">
         <h3>A Few Ground Rules 😎</h3>

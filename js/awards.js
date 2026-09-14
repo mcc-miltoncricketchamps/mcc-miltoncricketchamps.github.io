@@ -25,7 +25,9 @@
     ]).then(function(values) {
       state.config = values[0];
       state.players = values[1].players || [];
-      if (!state.players.length) throw new Error('No eligible MCC players are available.');
+      var resultsPublished = Boolean(state.config.results && state.config.results.published);
+      if (!resultsPublished && !state.players.length) throw new Error('No eligible MCC players are available.');
+      document.body.classList.toggle('results-published', resultsPublished);
       renderAwards();
       initializeCountdown();
       initializeShare();
@@ -42,6 +44,11 @@
   }
 
   function renderAwards() {
+    if (state.config.results && state.config.results.published) {
+      renderResults();
+      return;
+    }
+
     var categoriesBySection = {};
     state.config.categories.forEach(function(category) {
       (categoriesBySection[category.section] || (categoriesBySection[category.section] = [])).push(category);
@@ -76,6 +83,102 @@
       });
     });
     updateProgress();
+  }
+
+  function renderResults() {
+    var results = state.config.results;
+    var categoriesById = {};
+    state.config.categories.forEach(function(category) {
+      categoriesById[category.id] = category;
+    });
+
+    var votedAwards = (results.voted_awards || []).map(function(result) {
+      var category = categoriesById[result.id];
+      if (!category) return '';
+      return renderVotedResult(category, result);
+    }).join('');
+
+    var performanceAwards = (results.performance_awards || []).map(renderPerformanceResult).join('');
+
+    root.innerHTML =
+      '<section class="results-opening" aria-labelledby="official-results-title">' +
+        '<p class="awards-eyebrow">The Votes Are Counted</p>' +
+        '<h2 id="official-results-title">🏆 Official MCC Awards 2026 Results</h2>' +
+        '<p><strong>' + escapeHtml(results.valid_ballots) + ' valid ballots</strong> decided our six community awards. Every vote is shown below, followed by four performance awards from the 2026 season statistics.</p>' +
+        '<div class="results-summary">' +
+          '<span><strong>6</strong> Community Awards</span>' +
+          '<span><strong>4</strong> Performance Awards</span>' +
+          '<span><strong>10</strong> Honours Announced</span>' +
+        '</div>' +
+      '</section>' +
+      '<section class="results-section" aria-labelledby="community-results-title">' +
+        '<div class="results-section-heading">' +
+          '<p class="awards-eyebrow">Chosen By MCC</p>' +
+          '<h2 id="community-results-title">Community Vote Awards</h2>' +
+          '<p>Complete final standings, ordered by vote count.</p>' +
+        '</div>' +
+        '<div class="results-grid">' + votedAwards + '</div>' +
+      '</section>' +
+      '<section class="results-section performance-results" aria-labelledby="performance-results-title">' +
+        '<div class="results-section-heading">' +
+          '<p class="awards-eyebrow">Proven On The Field</p>' +
+          '<h2 id="performance-results-title">2026 Performance Awards</h2>' +
+          "<p>Season leaders based on MCC's official 2026 statistics.</p>" +
+        '</div>' +
+        '<div class="performance-results-grid">' + performanceAwards + '</div>' +
+      '</section>';
+  }
+
+  function renderVotedResult(category, result) {
+    var joint = result.winners.length > 1;
+    var winnerNames = formatNames(result.winners);
+    var standings = result.standings || [];
+    var maxVotes = Math.max.apply(null, standings.map(function(entry) { return entry.votes; }));
+
+    return '<article class="result-card">' +
+      '<div class="result-card-head">' +
+        '<div class="result-card-icon" aria-hidden="true">' + escapeHtml(category.icon) + '</div>' +
+        '<div>' +
+          '<div class="award-number">Award #' + escapeHtml(category.number) + '</div>' +
+          '<h3>' + escapeHtml(category.name) + '</h3>' +
+        '</div>' +
+      '</div>' +
+      '<div class="result-winner">' +
+        '<span class="result-winner-label">' + (joint ? 'Joint Winners' : 'Winner') + '</span>' +
+        '<strong>' + escapeHtml(winnerNames) + '</strong>' +
+        '<span>' + escapeHtml(result.winning_votes) + ' ' + (result.winning_votes === 1 ? 'vote' : 'votes') + (joint ? ' each' : '') + '</span>' +
+      '</div>' +
+      '<div class="result-standings" aria-label="Complete vote standings for ' + escapeHtml(category.name) + '">' +
+        standings.map(function(entry, index) {
+          var isWinner = result.winners.indexOf(entry.name) !== -1;
+          var percent = maxVotes ? Math.round(entry.votes / maxVotes * 100) : 0;
+          return '<div class="result-standing' + (isWinner ? ' winner' : '') + '">' +
+            '<span class="result-rank">' + (index + 1) + '</span>' +
+            '<span class="result-player">' + escapeHtml(entry.name) + '</span>' +
+            '<span class="result-bar" aria-hidden="true"><span style="width:' + percent + '%"></span></span>' +
+            '<strong>' + escapeHtml(entry.votes) + '</strong>' +
+          '</div>';
+        }).join('') +
+      '</div>' +
+    '</article>';
+  }
+
+  function renderPerformanceResult(result) {
+    var joint = result.winners.length > 1;
+    return '<article class="performance-result-card">' +
+      '<div class="performance-result-icon" aria-hidden="true">' + escapeHtml(result.icon) + '</div>' +
+      '<p class="performance-result-label">' + (joint ? 'Joint Winners' : '2026 Winner') + '</p>' +
+      '<h3>' + escapeHtml(result.name) + '</h3>' +
+      '<strong class="performance-result-winner">' + escapeHtml(formatNames(result.winners)) + '</strong>' +
+      '<span class="performance-result-stat">' + escapeHtml(result.stat) + '</span>' +
+      '<p>' + escapeHtml(result.description) + '</p>' +
+    '</article>';
+  }
+
+  function formatNames(names) {
+    if (names.length < 2) return names[0] || '';
+    if (names.length === 2) return names[0] + ' & ' + names[1];
+    return names.slice(0, -1).join(', ') + ' & ' + names[names.length - 1];
   }
 
   function renderAwardCard(category, tone) {
@@ -154,10 +257,13 @@
     if (!button) return;
     button.addEventListener('click', function() {
       var url = window.location.href.split('#')[0];
-      var message = '🏆 THE 2ND MCC AWARDS ARE HERE! 🏏🔥\n\n' +
-        "4+ Years of MCC. Unlimited Bakar. And now it's YOUR turn to decide the winners!\n\n" +
-        'Cast your votes for the MCC 2026 Awards 👇\n\n' + url +
-        '\n\nChoose wisely. No pressure. 😎🏆';
+      var resultsPublished = Boolean(state.config.results && state.config.results.published);
+      var message = resultsPublished
+        ? '🏆 THE MCC AWARDS 2026 RESULTS ARE OFFICIAL! 🏏🔥\n\nSee all community vote standings and our 2026 performance award winners 👇\n\n' + url
+        : '🏆 THE 2ND MCC AWARDS ARE HERE! 🏏🔥\n\n' +
+          "4+ Years of MCC. Unlimited Bakar. And now it's YOUR turn to decide the winners!\n\n" +
+          'Cast your votes for the MCC 2026 Awards 👇\n\n' + url +
+          '\n\nChoose wisely. No pressure. 😎🏆';
       if (navigator.share) {
         navigator.share({ title: 'The 2nd MCC Awards', text: message }).catch(function() {});
       } else {

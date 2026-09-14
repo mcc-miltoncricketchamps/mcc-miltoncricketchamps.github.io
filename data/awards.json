@@ -10,6 +10,327 @@
     "closes_at": "2026-09-09T12:31:50-04:00",
     "api_url": "https://script.google.com/macros/s/AKfycbxkoWf-VmTpwpNKs0j94nqjmlPHlkPq0f0vrt5bWwtJqab3W3azSkH8zYoAy9wlx0iYrw/exec"
   },
+  "results": {
+    "published": true,
+    "valid_ballots": 15,
+    "voted_awards": [
+      {
+        "id": "late-lateef",
+        "winners": [
+          "Bhavesh Rane",
+          "Gautam Grover"
+        ],
+        "winning_votes": 3,
+        "standings": [
+          {
+            "name": "Bhavesh Rane",
+            "votes": 3
+          },
+          {
+            "name": "Gautam Grover",
+            "votes": 3
+          },
+          {
+            "name": "Aditya Verma",
+            "votes": 2
+          },
+          {
+            "name": "Mandar Patil",
+            "votes": 2
+          },
+          {
+            "name": "Himanshu Kharat",
+            "votes": 1
+          },
+          {
+            "name": "Neel Kulkarni",
+            "votes": 1
+          },
+          {
+            "name": "Pankaj Yawalkar",
+            "votes": 1
+          },
+          {
+            "name": "Rishi",
+            "votes": 1
+          },
+          {
+            "name": "Taha Mohyuddin",
+            "votes": 1
+          }
+        ]
+      },
+      {
+        "id": "bakar-champion",
+        "winners": [
+          "Gautam Grover"
+        ],
+        "winning_votes": 6,
+        "standings": [
+          {
+            "name": "Gautam Grover",
+            "votes": 6
+          },
+          {
+            "name": "Aditya Verma",
+            "votes": 4
+          },
+          {
+            "name": "Damanvir Singh",
+            "votes": 3
+          },
+          {
+            "name": "Himanshu Kharat",
+            "votes": 1
+          },
+          {
+            "name": "Rishi",
+            "votes": 1
+          }
+        ]
+      },
+      {
+        "id": "gyaan-baba",
+        "winners": [
+          "Sachin Sakpal"
+        ],
+        "winning_votes": 4,
+        "standings": [
+          {
+            "name": "Sachin Sakpal",
+            "votes": 4
+          },
+          {
+            "name": "Aditya Verma",
+            "votes": 2
+          },
+          {
+            "name": "Rishi",
+            "votes": 2
+          },
+          {
+            "name": "Damanvir Singh",
+            "votes": 1
+          },
+          {
+            "name": "Gautam Grover",
+            "votes": 1
+          },
+          {
+            "name": "Himanshu Kharat",
+            "votes": 1
+          },
+          {
+            "name": "Mandar Patil",
+            "votes": 1
+          },
+          {
+            "name": "Pankaj Yawalkar",
+            "votes": 1
+          },
+          {
+            "name": "Suri",
+            "votes": 1
+          },
+          {
+            "name": "Tejas Shah",
+            "votes": 1
+          }
+        ]
+      },
+      {
+        "id": "most-improved",
+        "winners": [
+          "Jayesh N"
+        ],
+        "winning_votes": 5,
+        "standings": [
+          {
+            "name": "Jayesh N",
+            "votes": 5
+          },
+          {
+            "name": "Mohit Joshi",
+            "votes": 2
+          },
+          {
+            "name": "Rishi",
+            "votes": 2
+          },
+          {
+            "name": "Abhishek Kamle",
+            "votes": 1
+          },
+          {
+            "name": "Ankit Gadhiya",
+            "votes": 1
+          },
+          {
+            "name": "Damanvir Singh",
+            "votes": 1
+          },
+          {
+            "name": "Mayur Mhetre",
+            "votes": 1
+          },
+          {
+            "name": "Sukhi Mann",
+            "votes": 1
+          },
+          {
+            "name": "Suri",
+            "votes": 1
+          }
+        ]
+      },
+      {
+        "id": "rising-star",
+        "winners": [
+          "Rishi",
+          "Sukhi Mann",
+          "Mayur Mhetre",
+          "Vihar",
+          "Vishal N"
+        ],
+        "winning_votes": 2,
+        "standings": [
+          {
+            "name": "Rishi",
+            "votes": 2
+          },
+          {
+            "name": "Sukhi Mann",
+            "votes": 2
+          },
+          {
+            "name": "Mayur Mhetre",
+            "votes": 2
+          },
+          {
+            "name": "Vihar",
+            "votes": 2
+          },
+          {
+            "name": "Vishal N",
+            "votes": 2
+          },
+          {
+            "name": "Ankit Gadhiya",
+            "votes": 1
+          },
+          {
+            "name": "Bhupinder Arora",
+            "votes": 1
+          },
+          {
+            "name": "Damanvir Singh",
+            "votes": 1
+          },
+          {
+            "name": "Jayesh N",
+            "votes": 1
+          },
+          {
+            "name": "Suri",
+            "votes": 1
+          }
+        ]
+      },
+      {
+        "id": "best-find",
+        "winners": [
+          "Rishi",
+          "Vihar"
+        ],
+        "winning_votes": 3,
+        "standings": [
+          {
+            "name": "Rishi",
+            "votes": 3
+          },
+          {
+            "name": "Vihar",
+            "votes": 3
+          },
+          {
+            "name": "Sukhi Mann",
+            "votes": 2
+          },
+          {
+            "name": "Aditya Verma",
+            "votes": 1
+          },
+          {
+            "name": "Jayesh N",
+            "votes": 1
+          },
+          {
+            "name": "Mayur Mhetre",
+            "votes": 1
+          },
+          {
+            "name": "Mohit Sharma",
+            "votes": 1
+          },
+          {
+            "name": "Nachiket Sahasrabudhe",
+            "votes": 1
+          },
+          {
+            "name": "Sachin Sakpal",
+            "votes": 1
+          },
+          {
+            "name": "Suri",
+            "votes": 1
+          }
+        ]
+      }
+    ],
+    "performance_awards": [
+      {
+        "id": "top-batsman",
+        "icon": "🏏",
+        "name": "2026 Top Batsman",
+        "winners": [
+          "Mayur Mhetre"
+        ],
+        "stat": "693 Runs",
+        "description": "MCC's leading run-scorer of the 2026 season."
+      },
+      {
+        "id": "top-bowler",
+        "icon": "🎯",
+        "name": "2026 Top Bowler",
+        "winners": [
+          "Nachiket S"
+        ],
+        "stat": "32 Wickets",
+        "description": "MCC's leading wicket-taker of the 2026 season."
+      },
+      {
+        "id": "mvp",
+        "icon": "👑",
+        "name": "2026 Most Valuable Player",
+        "winners": [
+          "Mayur Mhetre"
+        ],
+        "stat": "1,153 MVP Points",
+        "description": "The highest overall contribution across batting, bowling and fielding."
+      },
+      {
+        "id": "top-fielder",
+        "icon": "🙌",
+        "name": "2026 Top Fielder",
+        "winners": [
+          "Nachiket S",
+          "Adi Shanbhag"
+        ],
+        "stat": "17 Dismissals Each",
+        "description": "Joint leaders for fielding dismissals during MCC's 2026 season."
+      }
+    ]
+  },
   "sections": [
     {
       "id": "fun",
