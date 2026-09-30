@@ -1,7 +1,7 @@
 {
   "source": "CricHeroes",
   "generated_from": "mcc_player_stats.json",
-  "player_count": 70,
+  "player_count": 71,
   "players": [
     {
       "id": "25905554",
@@ -70,6 +70,10 @@
     {
       "id": "39618303",
       "name": "Bhupinder Arora"
+    },
+    {
+      "id": "15231146",
+      "name": "Brian Gomes"
     },
     {
       "id": "5667340",
