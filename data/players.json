@@ -1,7 +1,7 @@
 {
   "source": "CricHeroes",
   "generated_from": "mcc_player_stats.json",
-  "player_count": 71,
+  "player_count": 72,
   "players": [
     {
       "id": "25905554",
@@ -270,6 +270,10 @@
     {
       "id": "52724506",
       "name": "Vihar"
+    },
+    {
+      "id": "51740445",
+      "name": "Vihar Patel"
     },
     {
       "id": "23131283",
